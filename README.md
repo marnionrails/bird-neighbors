@@ -88,8 +88,8 @@ _This environment was created on a Mac. For it to work properly in your local en
 Copyright (c) **_2021 Marni Sucher, Jessica Williams, Smita Raj, Tim Roth, Alex Bertotto_**
 
 ## Contact Information <a id="contact"></a>
-**_Marni Sucher [suchermarni@gmail.com](mailto:suchermarni@gmail.com)_**
-**_Jessica Williams [jessicarubinwilliams@gmail.com](mailto:suchermarni@gmail.com)_**
-**_Smita Raj [smita.raj12@gmail.com](mailto:suchermarni@gmail.com)_**
-**_Tim Roth [timroth@gmail.com](mailto:suchermarni@gmail.com)_**
+**_Marni Sucher [suchermarni@gmail.com](mailto:suchermarni@gmail.com)_** <br/>
+**_Jessica Williams [jessicarubinwilliams@gmail.com](mailto:suchermarni@gmail.com)_** <br/>
+**_Smita Raj [smita.raj12@gmail.com](mailto:suchermarni@gmail.com)_** <br/>
+**_Tim Roth [timroth@gmail.com](mailto:suchermarni@gmail.com)_** <br/>
 **_Alex Bertotto [ajb5206@gmail.com](mailto:suchermarni@gmail.com)_**
