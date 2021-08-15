@@ -22,7 +22,7 @@
 
 ## Preview <a id="preview"></a>
 
-* _Direct your browser to a [live version](https://jessicarubinwilliams.github.io/project/index.html) on GitHub Pages._
+* _Direct your browser to a [live version](https://marnionrails.github.io/bird-neighbors/index.html) on GitHub Pages._
 
 ## Technologies Used <a id="technologies"></a>
 
