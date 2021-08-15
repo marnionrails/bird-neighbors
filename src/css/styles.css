@@ -1,0 +1,13 @@
+body{
+  background-color: rgb(245, 197, 155);
+}
+
+.container{
+  padding-top: 80px;
+}
+
+h1{
+  color: brown;
+  padding-top: 40px;
+  text-align: center;
+}
