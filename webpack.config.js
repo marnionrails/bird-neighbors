@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const DotenvWebpackPlugin = require('dotenv-webpack');
 
 module.exports = {
   entry: './src/main.js',
@@ -18,7 +19,8 @@ module.exports = {
       title: 'Galactic Age Calculator',
       template: './src/index.html',
       inject: 'body'
-    })
+    }),
+    new DotenvWebpackPlugin,
   ],
   module: {
     rules: [
