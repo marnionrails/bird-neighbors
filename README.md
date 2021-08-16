@@ -58,7 +58,7 @@ _This is a detailed description of your application. Give as much detail as need
 * _Open the terminal on your local machine_
 * _If [Node.js](https://nodejs.org/en/) and [Nope Package Manager (npm)](https://www.npmjs.com/) are not installed on your local device, follow the instructions [here](https://www.learnhowtoprogram.com/intermediate-javascript/getting-started-with-javascript/installing-node-js)_
 * _Navigate to the directory inside of which you wish to house this project_
-* _Clone this project with the following git command `$ git clone <https://github.com/jessicarubinwilliams/project>`_
+* _Clone this project with the following git command `$ git clone <https://github.com/marnionrails/bird-neighbors>`_
 * _Navigate to the top level of the repository with the command `$ cd project`_
 * _Recreate project environment and install required dependencies with terminal command `$ npm install`_
 * _Create file for storing environmental variables you want to keep secret (such as an API key)`$ touch .env`_
