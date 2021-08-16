@@ -6,7 +6,7 @@
 
 #### _Brief description of application_
 
-#### _By **Marni Sucher**_
+#### _By **Alex Bertotto, Smita Raj, Tim Roth, Marni Sucher and Jessica Williams**_
 
 #### _Table of Contents_
 
@@ -22,7 +22,7 @@
 
 ## Preview <a id="preview"></a>
 
-* _Direct your browser to a [live version](https://marnionrails.github.io/bird-neighbors/index.html) on GitHub Pages._
+* _Direct your browser to a [live version](https://marnionrails.github.io/bird-neighbors) on GitHub Pages._
 
 ## Technologies Used <a id="technologies"></a>
 
@@ -85,11 +85,7 @@ _This environment was created on a Mac. For it to work properly in your local en
 ## License <a id="license"></a>
 *[MIT](https://choosealicense.com/licenses/mit/)*
 
-Copyright (c) **_2021 Marni Sucher, Jessica Williams, Smita Raj, Tim Roth, Alex Bertotto_**
+Copyright (c) **_2021 Alex Bertotto, Smita Raj, Tim Roth, Marni Sucher and Jessica Williams_**
 
 ## Contact Information <a id="contact"></a>
-**_Marni Sucher [suchermarni@gmail.com](mailto:suchermarni@gmail.com)_** <br/>
-**_Jessica Williams [jessicarubinwilliams@gmail.com](mailto:suchermarni@gmail.com)_** <br/>
-**_Smita Raj [smita.raj12@gmail.com](mailto:suchermarni@gmail.com)_** <br/>
-**_Tim Roth [timroth@gmail.com](mailto:suchermarni@gmail.com)_** <br/>
-**_Alex Bertotto [ajb5206@gmail.com](mailto:suchermarni@gmail.com)_**
+**_[Alex Bertotto](mailto:ajb5206@gmail.com), [Smita Raj](mailto:smita.raj12@gmail.com), [Tim Roth](mailto:timroth@gmail.com), [Marni Sucher](mailto:suchermarni@gmail.com), [Jessica R. Williams](mailto:jessicarubinwilliams@gmail.com)_**
