@@ -7,8 +7,8 @@ const filterXenoCantoResponse = (response) => {
 
 export const dynamicResponseOutput = () => {
 
-}
+// }
 
-export const dynamicErrorOutput = () => {
+// export const dynamicErrorOutput = () => {
 
-}
+// }
