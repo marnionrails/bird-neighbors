@@ -1,6 +1,7 @@
 export class EbirdService {
-  static getData(location) {
-    return fetch(`https://api.ebird.org/v2/data/obs/${location}/recent`, {
+  static getData(location,y,m,d) {
+  
+    return fetch(`https://api.ebird.org/v2/data/obs/${location}/historic/${y}/${m}/${d}?&maxResults=15`, {
       headers: {
         'x-ebirdapitoken': `${process.env.API_KEY}`,
       },
@@ -18,8 +19,8 @@ export class EbirdService {
 }
 
 export class NearbyService {  
-  static nearby(lat, lng) {
-    return fetch(`https://api.ebird.org/v2/data/obs/geo/recent?lat=${lat}&lng=${lng}`, {
+  static nearby(lat, lng, rad) {
+    return fetch(`https://api.ebird.org/v2/data/obs/geo/recent?lat=${lat}&lng=${lng}&&dist=${rad}&sort=date&maxResults=10`, {
       headers: {
         'x-ebirdapitoken': `${process.env.API_KEY}`,
       },
