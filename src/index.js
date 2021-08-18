@@ -67,30 +67,3 @@ $(document).ready(function() {
   });
 });
 
-/* import $ from 'jquery';
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './css/styles.css';
-import Geocode from './geocode';
-
-$('form#geolocation').submit(function() {
-  event.preventDefault();
-  console.log("submitted");
-  const zipCode = $('#zipCode').val("");
-  let promise = Geocode.getCoordinates(zipCode);
-  console.log(promise);
-  promise.then(function(response) {
-    console.log(response);
-    const body = JSON.parse(response);
-    $('#latitude').text(body.results[0].geometry.location.lat);
-    $('#longitude').text(body.results[0].geometry.location.lng);
-    let latitude = body.results[0].geometry.location.lat;
-    let longitude = body.results[0].geometry.location.lng;
-    console.log(latitude);
-    console.log(longitude);
-  }, function(error) {
-    console.log(error);
-    $('#showErrors').text(`There was an error processing your request: ${error}`);
-  });
-});
- */
