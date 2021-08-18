@@ -24,8 +24,8 @@
         <input id="day" type="text" >
       </div>
       <div class = "col">
-         <label for="lat">Enter the latitude:</label>
-         <input id="lat" type="text" >
+        <label for="lat">Enter the latitude:</label>
+        <input id="lat" type="text" >
       </div>
       <div class = "col">   
           <label for="lng">Enter the longitude:</label>
@@ -33,7 +33,7 @@
       </div>
       <div class = "col">   
         <label for="rad">Enter Your desired search radius up to 50km:</label>
-        <input id="rad" type="text" >
+        <input id="rad" type="text">
     </div>
       <div class = "col">    
     <button id="longlat" class="btn-primary">Long/Lat</button>
@@ -44,7 +44,12 @@
     <ul class= "showNearBirds"></ul>
     <div class="showErrors"></div>
   </div>
-  <div class=
+  <div class="zip">
+    <label for="zipcode">Enter your zipcode:</label>
+    <input id="zipCode" type="text">
+    <button id="zipcode" class="btn-primary">Zipcode</button>
+    <p>The lat is <span id="latitude"></span> and the lng is <span id="longitude"></span>.</p>
+  </div>
   
 </body>
 </html>

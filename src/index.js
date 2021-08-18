@@ -2,10 +2,12 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
+import  Geocode  from './geocode.js';
 import { EbirdService, NearbyService } from './ebird-service.js';
 
+
 function getElements(response) { 
-   if (response) {
+  if (response) {
     for(let i=0; i<=response.length; i++){
       $('ul.showBirds').append(`<li> The birds are called ${response[i].speciesCode} </li>`);
     }
@@ -43,6 +45,24 @@ $(document).ready(function() {
 		NearbyService.nearby(lat, lng, rad)
       .then(function(response) {
         getLongLatElements(response);
+      });
+  });
+  $('#zipcode').click(function() {
+    let zipCode = $('#zipCode').val();
+    let promise = Geocode.getCoordinates(zipCode);
+    promise.then(function(response) {
+      console.log(response);
+      const body = JSON.parse(response);
+      $('#latitude').text(body.results[0].geometry.location.lat);
+      $('#longitude').text(body.results[0].geometry.location.lng);
+      let lat = body.results[0].geometry.location.lat;
+      let lng = body.results[0].geometry.location.lng;
+      console.log(body.results[0].geometry.location.lng);
+      let rad = 30;
+      return NearbyService.nearby(lat, lng, rad)
+      .then(function(response) {
+        getLongLatElements(response);
+      });
       });
   });
 });
