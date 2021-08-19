@@ -343,6 +343,75 @@ export const mockXCResponse1 = {
   },
   ]};
 
+export const mockDataParsingReturn1 = [
+  {
+    id: "388121",
+    gen: "Accipiter",
+    sp: "cooperii",
+    ssp: "",
+    en: "Cooper's Hawk",
+    rec: "Lance A. M. Benner",
+    cnt: "United States",
+    loc: "East Loma Alta Drive, Altadena, Los Angeles County, California",
+    lat: "34.195",
+    lng: "-118.1199",
+    alt: "460",
+    type: "song of a newly fledged juvenile",
+    url: "www.xeno-canto.org/388121",
+    file: "www.xeno-canto.org/388121/download",
+    fileName: "XC388121-170928_03.coopers.hawk.e.loma.alta.dr.lance.benner.mp3",
+    sono:{
+      small: "www.xeno-canto.org/sounds/uploaded/MDZVOPUOXU/ffts/XC388121-small.png",
+      med: "www.xeno-canto.org/sounds/uploaded/MDZVOPUOXU/ffts/XC388121-med.png",
+      large: "www.xeno-canto.org/sounds/uploaded/MDZVOPUOXU/ffts/XC388121-large.png",
+      full: "www.xeno-canto.org/sounds/uploaded/MDZVOPUOXU/ffts/XC388121-full.png"
+    },
+    lic: "creativecommons.org/licenses/by-nc-sa/4.0/",
+    q: "A",
+    length: "0:57",
+    time: "08:33",
+    date: "2017-09-28",
+    uploaded: "2017-10-01",
+    also:[""],
+    rmk: "Recorded in a suburban neighborhood as the hawk was mobbing a great horned owl.  \r\nMy voice and a recycling truck are also audible.\r\n\r\nEquipment: Sony PCM-M10 recorder and a Sennheiser ME67 microphone.\r\nEdits: trimmed and normalized to -3 dB.",
+    birdSeen: "yes",
+    playbackUsed: "no"
+  },
+  {
+    id: "388120",
+    gen: "Accipiter",
+    sp: "cooperii",
+    ssp: "",
+    en: "Cooper's Hawk",
+    rec: "Lance A. M. Benner",
+    cnt: "United States",
+    loc: "East Loma Alta Drive, Altadena, Los Angeles County, California",
+    lat: "34.195",
+    lng: "-118.1199",
+    alt: "460",
+    type: "song of an adult male",
+    url: "www.xeno-canto.org/388120",
+    file: "www.xeno-canto.org/388120/download",
+    fileName: "XC388120-170928_02.coopers.hawk.e.loma.alta.dr.lance.benner.mp3",
+    sono: {
+      small: "www.xeno-canto.org/sounds/uploaded/MDZVOPUOXU/ffts/XC388120-small.png",
+      med: "www.xeno-canto.org/sounds/uploaded/MDZVOPUOXU/ffts/XC388120-med.png",
+      large: "www.xeno-canto.org/sounds/uploaded/MDZVOPUOXU/ffts/XC388120-large.png",
+      full: "www.xeno-canto.org/sounds/uploaded/MDZVOPUOXU/ffts/XC388120-full.png"
+    },
+    lic: "creativecommons.org/licenses/by-nc-sa/4.0/",
+    q: "A",
+    length: "0:39",
+    time: "08:28",
+    date: "2017-09-28",
+    uploaded: "2017-10-01",
+    also:[""],
+    rmk: "Recorded in a suburban neighborhood as the hawk was mobbing a great horned owl.  \r\nMy voice and a recycling truck are also audible.\r\n\r\nEquipment: Sony PCM-M10 recorder and a Sennheiser ME67 microphone.\r\nEdits: normalized to -3 dB.",
+    birdSeen: "yes",
+    playbackUsed: "no"
+  }
+];
+
 //mockXCResponse2 should contain
 //only 1 recordings from filteredRecordings i.e.
 //cnt: "United States"
