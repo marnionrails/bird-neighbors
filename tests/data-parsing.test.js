@@ -1,5 +1,5 @@
 import DataParsing from "../src/data-parsing.js";
-import { mockXCResponse1, mockXCResponse2, mockXCResponse3, mockXCResponse4, mockXCResponse5, mockXCResponse6, mockXCResponse7, mockXCResponse8, mockXCResponse9, mockDataParsingReturn1 } from "../src/mockXenoCantoResponses.js";
+import { mockXCResponse1, mockXCResponse2, mockXCResponse3, mockXCResponse4, mockXCResponse5, mockXCResponse6, mockXCResponse7, mockXCResponse8, mockXCResponse9, mockDataParsingReturn1, mockDataParsingReturn2 } from "../src/mockXenoCantoResponses.js";
 
 describe ('filterForSongs', () => {
 
@@ -11,6 +11,10 @@ describe ('filterForSongs', () => {
 
   test('should correctly prioritize filteredRecordings', () => {
     expect(DataParsing.filterForSongs(mockXCResponse1)).toEqual(mockDataParsingReturn1);
-  })
+  });
+
+  test ('should correctly prioritize when filteredRecordings.length === 1', () => {
+    expect(DataParsing.filterForSongs(mockXCResponse2)).toEqual(mockDataParsingReturn2);
+  });
 
 });
