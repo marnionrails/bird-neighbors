@@ -17,7 +17,7 @@ describe ('filterForSongs', () => {
     expect(DataParsing.filterForSongs(mockXCResponse2)).toEqual(mockDataParsingReturn2);
   });
 
-  test ('should correctly prioritize when filteredRecordings.length === 1', () => {
+  test ('should correctly prioritize when filteredRecordings.length === 0 && intersection2.length >= 2', () => {
     expect(DataParsing.filterForSongs(mockXCResponse3)).toEqual(mockDataParsingReturn3);
   });
 
