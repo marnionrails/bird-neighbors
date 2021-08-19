@@ -2461,7 +2461,7 @@ export const mockXCResponse7 = {
   },
   ]};
 
-  //mockXCResponse8 should contain
+//mockXCResponse8 should contain
 //0 recordings from filteredRecordings i.e
 //cnt: "United States"
 //type: "song" **CONTAINS!
@@ -2818,3 +2818,13 @@ export const mockXCResponse8 = {
     playbackUsed: "no"
   },
   ]};
+
+//mockXCResponse9 should contain
+//0 recordings 
+export const mockXCResponse9 = {
+  "numRecordings": "0",
+  "numSpecies": "1",
+  "page": 1,
+  "numPages": 1,
+  "recordings":[]
+};
