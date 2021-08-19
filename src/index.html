@@ -6,15 +6,24 @@
 <body>
   <h1>Bird search</h1>
   <div class="container">
-  <div class="zip">
-    <label for="zipcode">Enter your zipcode:</label>
-    <input id="zipCode" type="text">
-    <button id="zipcode" class="btn-primary">Submit</button>
-    <div class="nearBirdHeader"></div>
-    <ul class= "showNearBirds"></ul>
-    <div class="showErrors"></div>
-  </div>
-</div> 
+    <div class="zip">
+      <div class="row">
+        <div class = "col">
+          <label for="zipcode">Enter your zipcode:</label>
+          <input id="zipCode" type="text">
+          <button id="zipcode" class="btn-primary">Submit</button>
+        </div>
+        <div class = "col">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-header">Nearby birds include:</p>
+              <ul class= "showNearBirds"></ul>
+            <div class="showErrors"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
 </body>
 </html>
-

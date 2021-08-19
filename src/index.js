@@ -18,22 +18,20 @@ function getLongLatElements(response){
 $(document).ready(function() {
   
   $('#zipcode').click(function() {
+    $(".card").show();
     let zipCode = $('#zipCode').val();
     let promise = Geocode.getCoordinates(zipCode);
-    $(".nearBirdHeader").text('Nearby birds include:')
     $("ul.showNearBirds").text('');
     promise.then(function(response) {
-      console.log(response);
       const body = JSON.parse(response);
       let lat = body.results[0].geometry.location.lat;
       let lng = body.results[0].geometry.location.lng;
-      console.log(body.results[0].geometry.location.lng);
       let rad = 30;
       return NearbyService.nearby(lat, lng, rad)
-      .then(function(response) {
-        getLongLatElements(response);
-      });
-      });
+        .then(function(response) {
+          getLongLatElements(response);
+        });
+    });
   });
 });
 

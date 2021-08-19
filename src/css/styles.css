@@ -11,3 +11,10 @@ h1{
   padding-top: 40px;
   text-align: center;
 }
+
+.card{
+  display: none;
+}
+ul{
+  padding-top: 20px;
+}
