@@ -1,0 +1,2 @@
+import DataParsing from "../src/data-parsing.js";
+import { mockXCResponse1, mockXCResponse2, mockXCResponse3, mockXCResponse4, mockXCResponse5, mockXCResponse6, mockXCResponse7, mockXCResponse8} from "../src/mockXenoCantoResponses.js"
