@@ -1,7 +1,7 @@
 export default class DataParsing {
   static filterForSongs(response) {
     if (response.recordings.length === 0) {
-      throw new Error('No relevant recordings found.');
+      throw new Error('No relevant recordings found at this time.');
     } else {
       let bestQualityArray = [];
       let songRecordingsArray = [];
@@ -66,7 +66,7 @@ export default class DataParsing {
       } if (songsToOutput.length >= 1) {
         return songsToOutput;
       } else {
-        throw new Error('No relevant recordings found.');
+        throw new Error('No relevant recordings available at this time.');
       }
     }
   }
