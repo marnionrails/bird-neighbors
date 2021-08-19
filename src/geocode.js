@@ -4,7 +4,10 @@ export default class Geocode {
       let request = new XMLHttpRequest();
       const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${zipCode}&key=${process.env.API_KEY}`;
       request.onload = function() {
-        if (this.status === 200) {
+        if (this.response.status === "ZERO_RESULTS"){
+          console.log("error");
+        }
+        else if (this.status === 200) {
           resolve(request.response);
         } else {
           reject(request.response);
