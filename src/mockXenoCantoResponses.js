@@ -2875,6 +2875,75 @@ export const mockXCResponse7 = {
   },
   ]};
 
+export const mockDataParsingReturn7 = [
+  {
+    id: "414129",
+    gen: "Accipiter",
+    sp: "cooperii",
+    ssp: "",
+    en: "Cooper's Hawk",
+    rec: "Nancy Norman",
+    cnt: "Algeria",
+    loc: "Algiers, Algeria",
+    lat: "29.8833",
+    lng: "-97.9414",
+    alt: "-3670",
+    type: "song female",
+    url: "www.xeno-canto.org/414129",
+    file: "www.xeno-canto.org/414129/download",
+    fileName: "XC414129-Record_2018-05-07_12-17-13.mp3",
+    sono:{
+      small: "www.xeno-canto.org/sounds/uploaded/AVNNZOCYTN/ffts/XC414129-small.png",
+      med: "www.xeno-canto.org/sounds/uploaded/AVNNZOCYTN/ffts/XC414129-med.png",
+      large: "www.xeno-canto.org/sounds/uploaded/AVNNZOCYTN/ffts/XC414129-large.png",
+      full: "www.xeno-canto.org/sounds/uploaded/AVNNZOCYTN/ffts/XC414129-full.png"
+    },
+    lic: "creativecommons.org/licenses/by-nc-sa/4.0/",
+    q: "no score",
+    length: "0:09",
+    time: "12:30",
+    date: "2018-05-07",
+    uploaded: "2018-05-07",
+    also:["Other species"],
+    rmk: "The bird was in a dry creekbed, riparian area, not seen. Persistent call",
+    birdSeen: "unknown",
+    playbackUsed: "unknown"
+  },
+  {
+    id: "388121",
+    gen: "Accipiter",
+    sp: "cooperii",
+    ssp: "",
+    en: "Cooper's Hawk",
+    rec: "Lance A. M. Benner",
+    cnt: "Israel",
+    loc: "The Negev Desert",
+    lat: "34.195",
+    lng: "-118.1199",
+    alt: "460",
+    type: "song of a breeding male",
+    url: "www.xeno-canto.org/388121",
+    file: "www.xeno-canto.org/388121/download",
+    fileName: "XC388121-170928_03.coopers.hawk.e.loma.alta.dr.lance.benner.mp3",
+    sono:{
+      small: "www.xeno-canto.org/sounds/uploaded/MDZVOPUOXU/ffts/XC388121-small.png",
+      med: "www.xeno-canto.org/sounds/uploaded/MDZVOPUOXU/ffts/XC388121-med.png",
+      large: "www.xeno-canto.org/sounds/uploaded/MDZVOPUOXU/ffts/XC388121-large.png",
+      full: "www.xeno-canto.org/sounds/uploaded/MDZVOPUOXU/ffts/XC388121-full.png"
+    },
+    lic: "creativecommons.org/licenses/by-nc-sa/4.0/",
+    q: "no score",
+    length: "0:57",
+    time: "08:33",
+    date: "2017-09-28",
+    uploaded: "2017-10-01",
+    also:["Other species"],
+    rmk: "Recorded in a suburban neighborhood as the hawk was mobbing a great horned owl.  \r\nMy voice and a recycling truck are also audible.\r\n\r\nEquipment: Sony PCM-M10 recorder and a Sennheiser ME67 microphone.\r\nEdits: trimmed and normalized to -3 dB.",
+    birdSeen: "yes",
+    playbackUsed: "no"
+  }
+];
+
 //mockXCResponse8 should contain
 //0 recordings from filteredRecordings i.e
 //cnt: "United States"
