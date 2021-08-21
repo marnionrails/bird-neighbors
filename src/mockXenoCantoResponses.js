@@ -3302,6 +3302,42 @@ export const mockXCResponse8 = {
   },
   ]};
 
+export const mockDataParsingReturn8 = [
+  {
+    id: "414129",
+    gen: "Accipiter",
+    sp: "cooperii",
+    ssp: "",
+    en: "Cooper's Hawk",
+    rec: "Nancy Norman",
+    cnt: "Algeria",
+    loc: "Algiers, Algeria",
+    lat: "29.8833",
+    lng: "-97.9414",
+    alt: "-3670",
+    type: "song female",
+    url: "www.xeno-canto.org/414129",
+    file: "www.xeno-canto.org/414129/download",
+    fileName: "XC414129-Record_2018-05-07_12-17-13.mp3",
+    sono:{
+      small: "www.xeno-canto.org/sounds/uploaded/AVNNZOCYTN/ffts/XC414129-small.png",
+      med: "www.xeno-canto.org/sounds/uploaded/AVNNZOCYTN/ffts/XC414129-med.png",
+      large: "www.xeno-canto.org/sounds/uploaded/AVNNZOCYTN/ffts/XC414129-large.png",
+      full: "www.xeno-canto.org/sounds/uploaded/AVNNZOCYTN/ffts/XC414129-full.png"
+    },
+    lic: "creativecommons.org/licenses/by-nc-sa/4.0/",
+    q: "no score",
+    length: "0:09",
+    time: "12:30",
+    date: "2018-05-07",
+    uploaded: "2018-05-07",
+    also:["Other species"],
+    rmk: "The bird was in a dry creekbed, riparian area, not seen. Persistent call",
+    birdSeen: "unknown",
+    playbackUsed: "unknown"
+  }
+];
+
 //mockXCResponse9 should contain
 //0 recordings 
 export const mockXCResponse9 = {
