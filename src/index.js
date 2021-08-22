@@ -54,8 +54,9 @@ $(document).ready(function() {
         // $('#outputSounds').attr("src", birdSoundsBody.recordings[0].url);
         const songsToOutput = DataParsing.filterForSongs(birdSoundsBody);
         const callsToOutput = DataParsing.filterForCalls(birdSoundsBody);
-        console.log(songsToOutput);
+        $("#sound").attr("src", songsToOutput[0].file);
         console.log(callsToOutput);
+        // $("#callsToOutput").append(callsToOutput);
       }, function(error) {
         $('#showErrors').text(`There was an error with processing your bird sound request: ${error}`);
       });
