@@ -2,11 +2,11 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import BirdSoundsService from './bird-sounds-service.js';
-import DataParsing from './data-parsing.js';
-import  Geocode  from './geocode.js';
+import Geocode  from './geocode.js';
 import NearbyService from './ebird-service.js';
 import Validation from './validation.js';
+import BirdSoundsService from './bird-sounds-service.js';
+import DataParsing from './data-parsing.js';
 
 function listNearbyBirds(response){
   if (response) {
@@ -16,20 +16,6 @@ function listNearbyBirds(response){
     }
   }
 }
-
-$("#userInput").submit(function() {
-  event.preventDefault();
-  let species = "Accipiter cooperii"; // mocking getting species name from eBird API response
-  let promise = BirdSoundsService.getSounds(species);
-  promise.then(function(response) {
-    const body = JSON.parse(response);
-    $('#outputSounds').attr("src", body.recordings[0].url);
-    const recordingsToOutput = DataParsing.filterXenoCantoResponse(body);
-    console.log(recordingsToOutput);
-  }, function(error) {
-    $('#showErrors').text(`There was an error processing your request: ${error}`);
-  });
-});
 
 $(document).ready(function() {
   
@@ -55,12 +41,23 @@ $(document).ready(function() {
         $('.showErrors').text(`There was an error processing your zip code; ${error}`);
       })
       .then(function(nearbyServiceResponse) {
+        listNearbyBirds(nearbyServiceResponse);
         sciName = nearbyServiceResponse[0].sciName;
         console.log(sciName);
-        listNearbyBirds(nearbyServiceResponse);
+        return BirdSoundsService.getSounds(sciName);
       })
       .catch(function(error) {
         $('.showErrors').text(`There was an error with getting your local birds: ${error}`);
+      })
+      .then(function(birdSoundsResponse) {
+        const birdSoundsBody = JSON.parse(birdSoundsResponse);
+        // $('#outputSounds').attr("src", birdSoundsBody.recordings[0].url);
+        const songsToOutput = DataParsing.filterForSongs(birdSoundsBody);
+        const callsToOutput = DataParsing.filterForCalls(birdSoundsBody);
+        console.log(songsToOutput);
+        console.log(callsToOutput);
+      }, function(error) {
+        $('#showErrors').text(`There was an error with processing your bird sound request: ${error}`);
       });
   });
 });
