@@ -26,6 +26,7 @@ $(document).ready(function() {
     let lat = "";
     let lng = "";
     let rad = "";
+    let sciName = "";
     Validation.validation(zipCode);
     Geocode.getCoordinates(zipCode)
       .then(function(geocodeResponse) {
@@ -38,7 +39,8 @@ $(document).ready(function() {
         $('.showErrors').text(`There was an error processing your zip code; ${error}`);
       })
       .then(function(nearbyServiceResponse) {
-        console.log(nearbyServiceResponse);
+        sciName = nearbyServiceResponse[0].sciName;
+        console.log(sciName);
         listNearbyBirds(nearbyServiceResponse);
       })
       .catch(function(error) {
