@@ -65,7 +65,9 @@ export default class DataParsing {
         songsToOutput.push(songRecordingsArray[0]);
       } if (songsToOutput.length >= 1) {
         return songsToOutput;
-      } else {
+      } 
+      //mockXCResponse10
+      else {
         throw new Error('No relevant recordings available at this time.');
       }
     }
