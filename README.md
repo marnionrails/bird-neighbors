@@ -6,7 +6,7 @@
 
 #### _Brief description of application_
 
-#### _By **Marni Sucher**_
+#### _By **Alex Bertotto, Smita Raj, Tim Roth, Marni Sucher and Jessica Williams**_
 
 #### _Table of Contents_
 
@@ -22,7 +22,7 @@
 
 ## Preview <a id="preview"></a>
 
-* _Direct your browser to a [live version](https://marnionrails.github.io/bird-neighbors/index.html) on GitHub Pages._
+* _Direct your browser to a [live version](https://marnionrails.github.io/bird-neighbors) on GitHub Pages._
 
 ## Technologies Used <a id="technologies"></a>
 
@@ -58,7 +58,7 @@ _This is a detailed description of your application. Give as much detail as need
 * _Open the terminal on your local machine_
 * _If [Node.js](https://nodejs.org/en/) and [Nope Package Manager (npm)](https://www.npmjs.com/) are not installed on your local device, follow the instructions [here](https://www.learnhowtoprogram.com/intermediate-javascript/getting-started-with-javascript/installing-node-js)_
 * _Navigate to the directory inside of which you wish to house this project_
-* _Clone this project with the following git command `$ git clone <https://github.com/jessicarubinwilliams/project>`_
+* _Clone this project with the following git command `$ git clone <https://github.com/marnionrails/bird-neighbors>`_
 * _Navigate to the top level of the repository with the command `$ cd project`_
 * _Recreate project environment and install required dependencies with terminal command `$ npm install`_
 * _Create file for storing environmental variables you want to keep secret (such as an API key)`$ touch .env`_
@@ -85,11 +85,7 @@ _This environment was created on a Mac. For it to work properly in your local en
 ## License <a id="license"></a>
 *[MIT](https://choosealicense.com/licenses/mit/)*
 
-Copyright (c) **_2021 Marni Sucher, Jessica Williams, Smita Raj, Tim Roth, Alex Bertotto_**
+Copyright (c) **_2021 Alex Bertotto, Smita Raj, Tim Roth, Marni Sucher and Jessica Williams_**
 
 ## Contact Information <a id="contact"></a>
-**_Marni Sucher [suchermarni@gmail.com](mailto:suchermarni@gmail.com)_** <br/>
-**_Jessica Williams [jessicarubinwilliams@gmail.com](mailto:suchermarni@gmail.com)_** <br/>
-**_Smita Raj [smita.raj12@gmail.com](mailto:suchermarni@gmail.com)_** <br/>
-**_Tim Roth [timroth@gmail.com](mailto:suchermarni@gmail.com)_** <br/>
-**_Alex Bertotto [ajb5206@gmail.com](mailto:suchermarni@gmail.com)_**
+**_[Alex Bertotto](mailto:ajb5206@gmail.com), [Smita Raj](mailto:smita.raj12@gmail.com), [Tim Roth](mailto:timroth@gmail.com), [Marni Sucher](mailto:suchermarni@gmail.com), [Jessica R. Williams](mailto:jessicarubinwilliams@gmail.com)_**
