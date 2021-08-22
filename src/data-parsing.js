@@ -2,7 +2,7 @@ export default class DataParsing {
   static filterForSongs(response) {
     //mockXCSongResponse9
     if (response.recordings.length === 0) {
-      throw new Error('No relevant recordings found at this time.');
+      throw new Error('No relevant song recordings found at this time.');
     } else {
       let bestQualityArray = [];
       let songRecordingsArray = [];
@@ -69,7 +69,7 @@ export default class DataParsing {
       } 
       //mockXCResponseSong10
       else {
-        throw new Error('No relevant recordings available at this time.');
+        throw new Error('No relevant song recordings available at this time.');
       }
     }
   }

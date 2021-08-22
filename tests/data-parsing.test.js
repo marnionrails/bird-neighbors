@@ -6,7 +6,7 @@ describe ('filterForSongs', () => {
   test('should correctly throw an Error when API response contains no recordings', () => {
     expect(() => {
       DataParsing.filterForSongs(mockXCSongResponse9);
-    }).toThrow(new Error('No relevant recordings found at this time.'));
+    }).toThrow(new Error('No relevant song recordings found at this time.'));
   });
 
   test('should correctly prioritize filteredRecordings', () => {
@@ -44,6 +44,6 @@ describe ('filterForSongs', () => {
   test('should correctly throw an Error when songsToOutput.length === 0', () => {
     expect(() => {
       DataParsing.filterForSongs(mockXCSongResponse10);
-    }).toThrow(new Error('No relevant recordings available at this time.'));
+    }).toThrow(new Error('No relevant song recordings available at this time.'));
   });
 });
