@@ -1,5 +1,6 @@
 export default class DataParsing {
   static filterForSongs(response) {
+    //mockXCSongResponse9
     if (response.recordings.length === 0) {
       throw new Error('No relevant recordings found at this time.');
     } else {
@@ -24,49 +25,49 @@ export default class DataParsing {
       let intersection3 = bestQualityArray.filter(recording => songRecordingsArray.includes(recording));
       let filteredRecordings = intersection2.filter(recording => uSRecordingsArray.includes(recording));
       let songsToOutput = [];
-      //mockXCResponse1
+      //mockXCSongResponse1
       if (filteredRecordings.length >= 2) {
         for (let index = 0; index <= 1; index ++) {
           songsToOutput.push(filteredRecordings[index]);
         }
       } 
-      //mockXCResponse2
+      //mockXCSongResponse2
       else if (filteredRecordings.length === 1 && intersection2.length > 1) {
         songsToOutput.push(filteredRecordings[0]);
         songsToOutput.push(intersection2[1]);
       } 
-      //mockXCResponse3
+      //mockXCSongResponse3
       else if (filteredRecordings.length === 0 && intersection2.length >= 2) {
         songsToOutput.push(intersection2[0]);
         songsToOutput.push(intersection2[1]);
       } 
-      //mockXCResponse4
+      //mockXCSongResponse4
       else if (filteredRecordings.length === 0 && intersection2.length === 1 && intersection3.length >= 2) {
         songsToOutput.push(intersection2[0]);
         songsToOutput.push(intersection3[1]);
       } 
-      //mockXCResponse5
+      //mockXCSongResponse5
       else if (filteredRecordings.length === 0 && intersection2.length === 0 &&intersection3.length >= 2) {
         songsToOutput.push(intersection3[0]);
         songsToOutput.push(intersection3[1]);
       } 
-      //mockXCResponse6
+      //mockXCSongResponse6
       else if (filteredRecordings.length === 0 && intersection2.length === 0 && intersection3.length === 1 && songRecordingsArray.length >= 2) {
         songsToOutput.push(intersection3[0]);
         songsToOutput.push(songRecordingsArray[1]);
       } 
-      //mockXCResponse7
+      //mockXCSongResponse7
       else if (filteredRecordings.length === 0 && intersection2.length === 0 && intersection3.length === 0 && songRecordingsArray.length >= 2) {
         songsToOutput.push(songRecordingsArray[0]);
         songsToOutput.push(songRecordingsArray[1]);
       } 
-      //mockXCResponse8
+      //mockXCSongResponse8
       else if (filteredRecordings.length === 0 && intersection2.length === 0 && intersection3.length === 0 && songRecordingsArray.length === 1) {
         songsToOutput.push(songRecordingsArray[0]);
       } if (songsToOutput.length >= 1) {
         return songsToOutput;
       } 
-      //mockXCResponse10
+      //mockXCResponseSong10
       else {
         throw new Error('No relevant recordings available at this time.');
       }

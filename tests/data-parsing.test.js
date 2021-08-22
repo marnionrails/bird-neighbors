@@ -1,49 +1,49 @@
 import DataParsing from "../src/data-parsing.js";
-import { mockXCResponse1, mockXCResponse2, mockXCResponse3, mockXCResponse4, mockXCResponse5, mockXCResponse6, mockXCResponse7, mockXCResponse8, mockXCResponse9, mockXCResponse10, mockDataParsingReturn1, mockDataParsingReturn2, mockDataParsingReturn3, mockDataParsingReturn4, mockDataParsingReturn5, mockDataParsingReturn6, mockDataParsingReturn7, mockDataParsingReturn8} from "../src/mockXenoCantoResponses.js";
+import { mockXCSongResponse1, mockXCSongResponse2, mockXCSongResponse3, mockXCSongResponse4, mockXCSongResponse5, mockXCSongResponse6, mockXCSongResponse7, mockXCSongResponse8, mockXCSongResponse9, mockXCSongResponse10, mockDataParsingSongReturn1, mockDataParsingSongReturn2, mockDataParsingSongReturn3, mockDataParsingSongReturn4, mockDataParsingSongReturn5, mockDataParsingSongReturn6, mockDataParsingSongReturn7, mockDataParsingSongReturn8} from "../src/mockXenoCantoSongResponses.js";
 
 describe ('filterForSongs', () => {
 
   test('should correctly throw an Error when API response contains no recordings', () => {
     expect(() => {
-      DataParsing.filterForSongs(mockXCResponse9);
+      DataParsing.filterForSongs(mockXCSongResponse9);
     }).toThrow(new Error('No relevant recordings found at this time.'));
   });
 
   test('should correctly prioritize filteredRecordings', () => {
-    expect(DataParsing.filterForSongs(mockXCResponse1)).toEqual(mockDataParsingReturn1);
+    expect(DataParsing.filterForSongs(mockXCSongResponse1)).toEqual(mockDataParsingSongReturn1);
   });
 
   test ('should correctly prioritize when filteredRecordings.length === 1', () => {
-    expect(DataParsing.filterForSongs(mockXCResponse2)).toEqual(mockDataParsingReturn2);
+    expect(DataParsing.filterForSongs(mockXCSongResponse2)).toEqual(mockDataParsingSongReturn2);
   });
 
   test ('should correctly prioritize when filteredRecordings.length === 0 && intersection2.length >= 2', () => {
-    expect(DataParsing.filterForSongs(mockXCResponse3)).toEqual(mockDataParsingReturn3);
+    expect(DataParsing.filterForSongs(mockXCSongResponse3)).toEqual(mockDataParsingSongReturn3);
   });
 
   test ('should correctly prioritize when filteredRecordings.length === 0 && intersection2.length === 1 && intersection3.length >= 2', () => {
-    expect(DataParsing.filterForSongs(mockXCResponse4)).toEqual(mockDataParsingReturn4);
+    expect(DataParsing.filterForSongs(mockXCSongResponse4)).toEqual(mockDataParsingSongReturn4);
   });
 
   test ('should correctly prioritize when filteredRecordings.length === 0 && intersection2.length === 0 && intersection3.length >= 2', () => {
-    expect(DataParsing.filterForSongs(mockXCResponse5)).toEqual(mockDataParsingReturn5);
+    expect(DataParsing.filterForSongs(mockXCSongResponse5)).toEqual(mockDataParsingSongReturn5);
   });
 
   test ('should correctly prioritize when filteredRecordings.length === 0 && intersection2.length === 0 && intersection3.length === 1 && songRecordingsArray.length >= 2', () => {
-    expect(DataParsing.filterForSongs(mockXCResponse6)).toEqual(mockDataParsingReturn6);
+    expect(DataParsing.filterForSongs(mockXCSongResponse6)).toEqual(mockDataParsingSongReturn6);
   });
 
   test ('should correctly prioritize when filteredRecordings.length === 0 && intersection2.length === 0 && intersection3.length === 0 && songRecordingsArray.length >= 2', () => {
-    expect(DataParsing.filterForSongs(mockXCResponse7)).toEqual(mockDataParsingReturn7);
+    expect(DataParsing.filterForSongs(mockXCSongResponse7)).toEqual(mockDataParsingSongReturn7);
   });
 
   test ('should correctly prioritize when filteredRecordings.length === 0 && intersection2.length === 0 && intersection3.length === 0 && songRecordingsArray.length === 1', () => {
-    expect(DataParsing.filterForSongs(mockXCResponse8)).toEqual(mockDataParsingReturn8);
+    expect(DataParsing.filterForSongs(mockXCSongResponse8)).toEqual(mockDataParsingSongReturn8);
   });
 
   test('should correctly throw an Error when songsToOutput.length === 0', () => {
     expect(() => {
-      DataParsing.filterForSongs(mockXCResponse10);
+      DataParsing.filterForSongs(mockXCSongResponse10);
     }).toThrow(new Error('No relevant recordings available at this time.'));
   });
 });

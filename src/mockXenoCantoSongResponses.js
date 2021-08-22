@@ -1,12 +1,12 @@
 //These mock returns have been altered to test filtering functions. The descriptions of the files may not accurately describe the files themselves...do not use the data below to actually learn about the songs and calls fo Accipiter cooperii, Cooper's Hawk. Use it to test code.
 
-//mockXCResponse1 should contain 
+//mockXCSongResponse1 should contain 
 //2 or more recordings from filteredRecordings i.e.
 //cnt: "United States"
 //type: "song" **CONTAINS!
 //q: "A"
 //also : [""]
-export const mockXCResponse1 = {
+export const mockXCSongResponse1 = {
   "numRecordings": "10",
   "numSpecies": "1",
   "page": 1,
@@ -343,7 +343,7 @@ export const mockXCResponse1 = {
   },
   ]};
 
-export const mockDataParsingReturn1 = [
+export const mockDataParsingSongReturn1 = [
   {
     id: "388121",
     gen: "Accipiter",
@@ -412,7 +412,7 @@ export const mockDataParsingReturn1 = [
   }
 ];
 
-//mockXCResponse2 should contain
+//mockXCSongResponse2 should contain
 //only 1 recordings from filteredRecordings i.e.
 //cnt: "United States"
 //type: "song" **CONTAINS!
@@ -423,7 +423,7 @@ export const mockDataParsingReturn1 = [
 //q: "A"
 //also : [""]
 //cnt: "Canada" (or any other country not the US)
-export const mockXCResponse2 = {
+export const mockXCSongResponse2 = {
   "numRecordings": "10",
   "numSpecies": "1",
   "page": 1,
@@ -760,7 +760,7 @@ export const mockXCResponse2 = {
   },
   ]};
 
-export const mockDataParsingReturn2 = [
+export const mockDataParsingSongReturn2 = [
   {
     id: "414129",
     gen: "Accipiter",
@@ -829,7 +829,7 @@ export const mockDataParsingReturn2 = [
   }
 ];  
 
-//mockXCResponse3 should contain
+//mockXCSongResponse3 should contain
 //0 recordings from filteredRecordings i.e.
 //cnt: "United States"
 //type: "song" **CONTAINS!
@@ -840,7 +840,7 @@ export const mockDataParsingReturn2 = [
 //q: "A"
 //also : [""]
 //cnt: "Canada" (or any other country not the US)
-export const mockXCResponse3 = {
+export const mockXCSongResponse3 = {
   "numRecordings": "10",
   "numSpecies": "1",
   "page": 1,
@@ -1177,7 +1177,7 @@ export const mockXCResponse3 = {
   },
   ]};
 
-export const mockDataParsingReturn3 = [
+export const mockDataParsingSongReturn3 = [
   {
     id: "414129",
     gen: "Accipiter",
@@ -1246,7 +1246,7 @@ export const mockDataParsingReturn3 = [
   }
 ];
 
-//mockXCResponse4 should contain
+//mockXCSongResponse4 should contain
 //0 recordings from filteredRecordings i.e
 //cnt: "United States"
 //type: "song" **CONTAINS!
@@ -1262,7 +1262,7 @@ export const mockDataParsingReturn3 = [
 //q: "A"
 //also : ["any species"]
 //cnt: "Canada" (or any other country not the US)
-export const mockXCResponse4 = {
+export const mockXCSongResponse4 = {
   "numRecordings": "10",
   "numSpecies": "1",
   "page": 1,
@@ -1599,7 +1599,7 @@ export const mockXCResponse4 = {
   },
   ]};
 
-export const mockDataParsingReturn4 = [
+export const mockDataParsingSongReturn4 = [
   {
     id: "414129",
     gen: "Accipiter",
@@ -1668,7 +1668,7 @@ export const mockDataParsingReturn4 = [
   }
 ];
 
-//mockXCResponse5 should contain
+//mockXCSongResponse5 should contain
 //0 recordings from filteredRecordings i.e
 //cnt: "United States"
 //type: "song" **CONTAINS!
@@ -1684,7 +1684,7 @@ export const mockDataParsingReturn4 = [
 //q: "A"
 //also : ["any species"]
 //cnt: "Canada" (or any other country not the US)
-export const mockXCResponse5 = {
+export const mockXCSongResponse5 = {
   "numRecordings": "10",
   "numSpecies": "1",
   "page": 1,
@@ -2021,7 +2021,7 @@ export const mockXCResponse5 = {
   },
   ]};
 
-export const mockDataParsingReturn5 = [
+export const mockDataParsingSongReturn5 = [
   {
     id: "414129",
     gen: "Accipiter",
@@ -2090,7 +2090,7 @@ export const mockDataParsingReturn5 = [
   }
 ];
 
-//mockXCResponse6 should contain
+//mockXCSongResponse6 should contain
 //0 recordings from filteredRecordings i.e
 //cnt: "United States"
 //type: "song" **CONTAINS!
@@ -2111,7 +2111,7 @@ export const mockDataParsingReturn5 = [
 //q: "no score" (or anything not "A")
 //also : ["any species"]
 //cnt: "Canada" (or any other country not the US)
-export const mockXCResponse6 = {
+export const mockXCSongResponse6 = {
   "numRecordings": "10",
   "numSpecies": "1",
   "page": 1,
@@ -2448,7 +2448,7 @@ export const mockXCResponse6 = {
   },
   ]};
 
-export const mockDataParsingReturn6 = [
+export const mockDataParsingSongReturn6 = [
   {
     id: "414129",
     gen: "Accipiter",
@@ -2517,7 +2517,7 @@ export const mockDataParsingReturn6 = [
   }
 ];
 
-//mockXCResponse7 should contain
+//mockXCSongResponse7 should contain
 //0 recordings from filteredRecordings i.e
 //cnt: "United States"
 //type: "song" **CONTAINS!
@@ -2538,7 +2538,7 @@ export const mockDataParsingReturn6 = [
 //q: "no score" (or anything not "A")
 //also : ["any species"]
 //cnt: "Canada" (or any other country not the US)
-export const mockXCResponse7 = {
+export const mockXCSongResponse7 = {
   "numRecordings": "10",
   "numSpecies": "1",
   "page": 1,
@@ -2875,7 +2875,7 @@ export const mockXCResponse7 = {
   },
   ]};
 
-export const mockDataParsingReturn7 = [
+export const mockDataParsingSongReturn7 = [
   {
     id: "414129",
     gen: "Accipiter",
@@ -2944,7 +2944,7 @@ export const mockDataParsingReturn7 = [
   }
 ];
 
-//mockXCResponse8 should contain
+//mockXCSongResponse8 should contain
 //0 recordings from filteredRecordings i.e
 //cnt: "United States"
 //type: "song" **CONTAINS!
@@ -2965,7 +2965,7 @@ export const mockDataParsingReturn7 = [
 //q: "no score" (or anything not "A")
 //also : ["any species"]
 //cnt: "Canada" (or any other country not the US)
-export const mockXCResponse8 = {
+export const mockXCSongResponse8 = {
   "numRecordings": "10",
   "numSpecies": "1",
   "page": 1,
@@ -3302,7 +3302,7 @@ export const mockXCResponse8 = {
   },
   ]};
 
-export const mockDataParsingReturn8 = [
+export const mockDataParsingSongReturn8 = [
   {
     id: "414129",
     gen: "Accipiter",
@@ -3338,9 +3338,9 @@ export const mockDataParsingReturn8 = [
   }
 ];
 
-//mockXCResponse9 should contain
+//mockXCSongResponse9 should contain
 //0 recordings 
-export const mockXCResponse9 = {
+export const mockXCSongResponse9 = {
   "numRecordings": "0",
   "numSpecies": "1",
   "page": 1,
@@ -3348,7 +3348,7 @@ export const mockXCResponse9 = {
   "recordings":[]
 };
 
-//mockXCResponse10 should contain
+//mockXCResponseSong10 should contain
 //0 recordings from filteredRecordings i.e
 //cnt: "United States"
 //type: "song" **CONTAINS!
@@ -3369,7 +3369,7 @@ export const mockXCResponse9 = {
 //q: "no score" (or anything not "A")
 //also : ["any species"]
 //cnt: "Canada" (or any other country not the US)
-export const mockXCResponse10 = {
+export const mockXCSongResponse10 = {
   "numRecordings": "10",
   "numSpecies": "1",
   "page": 1,
