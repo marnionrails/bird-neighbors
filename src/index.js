@@ -29,6 +29,7 @@ $(document).ready(function() {
     let lng = "";
     let rad = "";
     let sciName = "";
+    let comName = "";
     Validation.validation(zipCode);
     Geocode.getCoordinates(zipCode)
       .then(function(geocodeResponse) {
@@ -43,7 +44,8 @@ $(document).ready(function() {
       .then(function(nearbyServiceResponse) {
         listNearbyBirds(nearbyServiceResponse);
         sciName = nearbyServiceResponse[0].sciName;
-        console.log(sciName);
+        comName = nearbyServiceResponse[0].comName;
+        $("#common-name").text(comName);
         return BirdSoundsService.getSounds(sciName);
       })
       .catch(function(error) {
@@ -54,6 +56,7 @@ $(document).ready(function() {
         // $('#outputSounds').attr("src", birdSoundsBody.recordings[0].url);
         const songsToOutput = DataParsing.filterForSongs(birdSoundsBody);
         const callsToOutput = DataParsing.filterForCalls(birdSoundsBody);
+
         $("#sound").attr("src", songsToOutput[0].file);
         console.log(callsToOutput);
         // $("#callsToOutput").append(callsToOutput);
