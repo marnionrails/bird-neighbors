@@ -1,5 +1,5 @@
 import DataParsing from "../src/data-parsing.js";
-import { mockXCResponse1, mockXCResponse2, mockXCResponse3, mockXCResponse4, mockXCResponse5, mockXCResponse6, mockXCResponse7, mockXCResponse8, mockXCResponse9, mockDataParsingReturn1, mockDataParsingReturn2, mockDataParsingReturn3, mockDataParsingReturn4, mockDataParsingReturn5, mockDataParsingReturn6, mockDataParsingReturn7, mockDataParsingReturn8} from "../src/mockXenoCantoResponses.js";
+import { mockXCResponse1, mockXCResponse2, mockXCResponse3, mockXCResponse4, mockXCResponse5, mockXCResponse6, mockXCResponse7, mockXCResponse8, mockXCResponse9, mockXCResponse10, mockDataParsingReturn1, mockDataParsingReturn2, mockDataParsingReturn3, mockDataParsingReturn4, mockDataParsingReturn5, mockDataParsingReturn6, mockDataParsingReturn7, mockDataParsingReturn8} from "../src/mockXenoCantoResponses.js";
 
 describe ('filterForSongs', () => {
 
@@ -41,4 +41,9 @@ describe ('filterForSongs', () => {
     expect(DataParsing.filterForSongs(mockXCResponse8)).toEqual(mockDataParsingReturn8);
   });
 
+  test('should correctly throw an Error when songsToOutput.length === 0', () => {
+    expect(() => {
+      DataParsing.filterForSongs(mockXCResponse10);
+    }).toThrow(new Error('No relevant recordings available at this time.'));
+  });
 });
