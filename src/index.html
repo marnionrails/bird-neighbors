@@ -6,17 +6,30 @@
 <body>
   <div class="container">
     <h1>Get to know your bird neighbors</h1>
-    <form id="userInput">
-
-      <button type="submit" class="btn btn-info" >Find Your Bird Neighbors</button>
-    </form>
-
-    <div id="outputSounds">
-
-    </div>
-    <div id="showErrors">
-
+    <div class="zip">
+      <div class="row">
+        <div class = "col">
+          <label for="zipcode">Enter your zipcode:</label>
+          <input id="zipCode" type="text">
+          <button id="zipcode" class="btn-primary">Find Your Bird Neighbors</button>
+        </div>
+        <div class = "col">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-header">Nearby birds include:</p>
+              <ul class= "showNearBirds"></ul>
+            <div class="showEbirdErrors"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  <div id="outputSounds">
+
+  </div>
+  <div id="showXCErrors">
+
+  </div>
+</div>
 </body>
 </html>
