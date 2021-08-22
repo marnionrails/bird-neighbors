@@ -15,6 +15,11 @@ h1{
 .card{
   display: none;
 }
+
 ul{
   padding-top: 20px;
+}
+
+.showErrors{
+  color: darkred;
 }
