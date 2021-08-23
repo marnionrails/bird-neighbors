@@ -54,7 +54,15 @@
 
 ## Description <a id="description"></a>
 
-_This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have. Balance between a summary of the project and a tame market pitch._
+_Birds are some of the most common wild animals with which human civilization intersects. Birds are found on every continent and inhabit all the places humans live: urban, suburban, and rural. Birds are not always easy to see or to see for long to get a good look. You're more likely to hear a bird than see it._
+
+_The Baader-Meinhof Phenomenon, also known as frequency illusion, explains that human brains reinforce recently acquired information by paying more attention to subsequent occurrences of or references to that newly acquired information. Applying this to the context of bird songs and calls we may say, by becoming familiar with the songs and calls of your local birds will allow you to actually register and recognize those sounds when birds make them around you. The presence of those birds won't be more frequent (other than expected seasonal population changes of migratory species) but experientially you will become more aware of birds singing and calling around you._
+
+_Learning to recognize the songs and calls of your local birds with our application, Meet Your Bird Neighbors, will enhance your awareness of and appreciation for the world around you while also tuning your attention to all the different bird species around you._
+
+_Enter a zip code into the application's user interface and click the 'submit' button. The application will return to you a list of local birds from Cornell Lab of Ornithology's [eBird database](https://ebird.org/home) as well as recordings of each of those species songs and calls from the [xeno-canto database](https://www.xeno-canto.org/)._
+
+_Listen to the recordings, become familiar with them and then listen as you go about your life. Enhance your connection to the natural world around you by getting to know your bird neighbors._
 
 ## API Key Procurement <a id="api"></a>
 
