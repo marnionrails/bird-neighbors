@@ -111,12 +111,6 @@ Get to Know Your Bird Neighbors uses three Application Programming Interface, AP
 This environment was created on a Mac. For it to work properly in your local environment make the following change:
 * Update package.json, line 8 to: `"start": "npm run build & webpack-dev-server --open --mode development",`
 
-## Specifications <a id="specs"></a>
-
-| Behavior | Input | Output |
-|:---:|:---:|:---:|
-| The program should handle... | When it receives... | It should return... |
-
 ## Known Bugs <a id="bugs"></a>
 * _Any known issues_
 * _should go here_
