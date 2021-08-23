@@ -30,7 +30,15 @@ $(document).ready(function() {
     let rad = "";
     let sciName = "";
     let comName = "";
-    Validation.validation(zipCode);
+    let check = Validation.validation(zipCode);
+    if(check ){
+      $(".card").hide();
+      $(".showErrors").text("There was an error zipcode is not valid");
+    } else {
+      $(".card").show();
+      $(".showErrors").hide();
+    }
+    console.log(`check: ${check}`);
     Geocode.getCoordinates(zipCode)
       .then(function(geocodeResponse) {
         const geocodeBody = JSON.parse(geocodeResponse);
@@ -65,3 +73,5 @@ $(document).ready(function() {
       });
   });
 });
+
+

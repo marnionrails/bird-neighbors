@@ -9,7 +9,7 @@
     <div class="zip">
       <div class="row">
         <div class = "col">
-          <label for="zipcode">Enter your zipcode:</label>
+          <label for="zipcode">Enter your 5 digit zip code:</label>
           <input id="zipCode" type="text" onkeypress= " return event.charCode > 47 && event.charCode < 58;" pattern="[0-9]{5}" required></input>
           <button id="zipcode" class="btn-primary">Submit</button>
         </div>
@@ -20,10 +20,10 @@
               <ul class= "showNearBirds"></ul>  
             </div>
           </div>
-          <div class="showErrors"></div>
         </div>
       </div>
     </div> 
+    <div class="showErrors"></div>
     <figure>
       <figcaption>Listen to <span id="common-name"></span></figcaption>
       <audio 
