@@ -12,10 +12,9 @@
 4. [API Key Procurement](#api)
 5. [Setup/Installation Requirements](#setup)
 6. [Additional Setup/Installation Note for Windows Users](#windows)
-7. [Specifications](#specs)
-8. [Known Bugs](#bugs)
-9. [License](#license)
-10. [Contact Information](#contact)
+7. [Known Bugs](#bugs)
+8. [License](#license)
+9. [Contact Information](#contact)
 
 ## Preview <a id="preview"></a>
 
