@@ -1,10 +1,10 @@
-# _Meet Your Bird Neighbors_
+# Meet Your Bird Neighbors
 
 #### _A web-based application which takes a zip code from the user and returns a list of local birds as well as recordings of those birds' songs and calls._
 
-#### _By **Alex Bertotto, Smita Raj, Tim Roth, Marni Sucher and Jessica Williams**_
+#### By **Alex Bertotto, Smita Raj, Tim Roth, Marni Sucher and Jessica Williams**
 
-#### _Table of Contents_
+#### Table of Contents
 
 1. [Preview](#preview)
 2. [Technologies Used](#technologies)
@@ -19,7 +19,7 @@
 
 ## Preview <a id="preview"></a>
 
-* _Direct your browser to a [live version](https://marnionrails.github.io/bird-neighbors) on GitHub Pages._
+* Direct your browser to a [live version](https://marnionrails.github.io/bird-neighbors) on GitHub Pages.
 
 ## Technologies Used <a id="technologies"></a>
 
@@ -54,36 +54,56 @@
 
 ## Description <a id="description"></a>
 
-_Birds are some of the most common wild animals with which human civilization intersects. Birds are found on every continent and inhabit all the places humans live: urban, suburban, and rural. Birds are not always easy to see or to see for long to get a good look. You're more likely to hear a bird than see it._
+Birds are some of the most common wild animals with which human civilization intersects. Birds are found on every continent and inhabit all the places humans live: urban, suburban, and rural. Birds are not always easy to see or to see for long to get a good look. You're more likely to hear a bird than see it.
 
-_The Baader-Meinhof Phenomenon, also known as frequency illusion, explains that human brains reinforce recently acquired information by paying more attention to subsequent occurrences of or references to that newly acquired information. Applying this to the context of bird songs and calls we may say, by becoming familiar with the songs and calls of your local birds will allow you to actually register and recognize those sounds when birds make them around you. The presence of those birds won't be more frequent (other than expected seasonal population changes of migratory species) but experientially you will become more aware of birds singing and calling around you._
+The Baader-Meinhof Phenomenon, also known as frequency illusion, explains that human brains reinforce recently acquired information by paying more attention to subsequent occurrences of or references to that newly acquired information. Applying this to the context of bird songs and calls we may say, by becoming familiar with the songs and calls of your local birds will allow you to actually register and recognize those sounds when birds make them around you. The presence of those birds won't be more frequent (other than expected seasonal population changes of migratory species) but experientially you will become more aware of birds singing and calling around you.
 
-_Learning to recognize the songs and calls of your local birds with our application, Meet Your Bird Neighbors, will enhance your awareness of and appreciation for the world around you while also tuning your attention to all the different bird species around you._
+Learning to recognize the songs and calls of your local birds with our application, Meet Your Bird Neighbors, will enhance your awareness of and appreciation for the world around you while also tuning your attention to all the different bird species around you.
 
-_Enter a zip code into the application's user interface and click the 'submit' button. The application will return to you a list of local birds from Cornell Lab of Ornithology's [eBird database](https://ebird.org/home) as well as recordings of each of those species songs and calls from the [xeno-canto database](https://www.xeno-canto.org/)._
+Enter a zip code into the application's user interface and click the 'submit' button. The application will return to you a list of local birds from Cornell Lab of Ornithology's [eBird database](https://ebird.org/home) as well as recordings of each of those species songs and calls from the [xeno-canto database](https://www.xeno-canto.org/).
 
-_Listen to the recordings, become familiar with them and then listen as you go about your life. Enhance your connection to the natural world around you by getting to know your bird neighbors._
+Listen to the recordings, become familiar with them and then listen as you go about your life. Enhance your connection to the natural world around you by getting to know your bird neighbors.
 
 ## API Key Procurement <a id="api"></a>
 
+Get to Know Your Bird Neighbors uses three Application Programming Interface, API, calls to return output to the user. The three APIs are the [Geocoding API](https://developers.google.com/maps/documentation/geocoding/start) from Google Enterprise API, [eBird API 2.0](https://documenter.getpostman.com/view/664302/S1ENwy59?version=latest) from Cornell Lab of Ornithology and [xeno-canto API 2.0](https://www.xeno-canto.org/explore/api) from the Xeno-canto Foundation. The Geocoding API and the eBird API 2.0 both require an API key. If you wish to run this project in your local environment, your first task will be to procure these API keys.
+
+### Geocoding API Procurement Instructions
+-_Information about pricing for the Geocoding API:_ As of the launch of Get to Know Your Bird Neighbors in August of 2021,the Geocoding API key is effectively free as long as you stay under the very large monthly call limit (see below for details). However, you will have to enter credit card information, _which will not be charged unless you go over the very generous monthly call limit_, in order to get a key. As of the launch of Get to Know Your Bird Neighbors in August of 2021, creating a Google Cloud console account automatically entitles you to 90-day, $300 free trial to get you started. The call rate for the Geocode API as of August 23, 2021 is $0.005 USD. That means you may make up to 60,000 Geocode API calls with this free trial (this number will be less if you are making other calls to other Google APIs with the same account). Further, according to the Geocoding API Usage and Billing [documentation](https://developers.google.com/maps/documentation/geocoding/usage-and-billing) "For each billing account, for qualifying Google Maps Platform SKUs, a $200 USD Google Maps Platform credit is available each month, and automatically applied to the qualifying SKUs." Geocoding _is_ a "qualifying Google Maps Platform SKUs" as indicated on the Maps Platform [Pricing Sheet](https://cloud.google.com/maps-platform/pricing/sheet). As such, the monthly $200 USD credit is worth up to 40,000 calls (As above, the number of free calls to the Geocoding API will be less if you are also making other calls to other qualifying Google Maps Platform SKUs). You will have to enter credit card information to get an API key but as the pricing is pay as you go, you won't be charged unless you make more than $200 worth of qualifying calls per month.
+
+1. If you don't already have a general Google account you wish to use to obtain an this API key, follow Google's [instructions](https://support.google.com/accounts/answer/27441?hl=en) and create a new general Google account. Remember you username and password.
+2. Create a Google Cloud account by following the [instructions](https://cloud.google.com/apigee/docs/hybrid/v1.3/precog-gcpaccount) in Google Cloud's documentation. The first step will be creating a Google Cloud console account. This is the step in which you will have to enter your credit card information, so have it ready.
+3. Google assigns API keys to individual projects withing your account. You may either use the default "My First Project" or create a Google Cloud project by following the[instructions](https://cloud.google.com/apigee/docs/hybrid/v1.3/precog-gcpproject) in Google Cloud's documentation.
+4. In your chosen project withing the Google Cloud UI enable the Geocoding API by using the Navigation menu to select "APIs & Services" > "Library". In the API Library view search for "Geocoding API." When the Geocoding API is returned in the search results, click on it. You will be redirected to the Geocoding API page. Click the "ENABLE" button.
+5. To get actually get your API key, use the Navigation menu to select "Credentials." Once redirected to the Credentials page, click "+CREATE CREDENTIALS" > "API key" at the top of the page. While it is not difficult to navigate back to this page, you may wish to record your API key. If desired, click the button offered to restrict your API keys use in a production environment.
+
+### eBird API 2.0 Procurement Instructions
+
+1. Visit The Cornell Lab of Ornithology's [Account Creation Website](https://secure.birds.cornell.edu/cassso/account/create?service=https%3A%2F%2Febird.org%2Flogin%2Fcas%3Fportal%3Debird&locale=en_US), provide the requested basic information, and click the 'Create Account' button.
+2. Check the email of the email address you used to sign up for an account and look for the confirmation email. Click the 'Activate account' button within the confirmation email.
+3. Clicking the 'Activate account' button will redirect you to your Cornell Lab account page. If you wish to provide your address (if you wish to use eBird beyond creating an API key to use in the Get to Know Your Bird Neighbors application) do so and click the 'Save' button. Otherwise, click the 'Skip this step' button.
+4. You will be redirected to the Preferences page. Select your preferences and click the 'Confirm and Accept' button at the bottom of the page.  You will be redirected to the eBird homepage. 
+5. Visit the [Request API Access webpage](https://ebird.org/api/keygen), fill out the form, and click the 'Submit Request' button at the bottom of the page.
+6. You will be redirected to a page displaying your API key. Record this or take a screen shot now! This page is inconvenient to navigate to again.
+
 ## Setup/Installation Requirements <a id="setup"></a>
 
-* _Open the terminal on your local machine_
-* _If [Node.js](https://nodejs.org/en/) and [Nope Package Manager (npm)](https://www.npmjs.com/) are not installed on your local device, follow the instructions [here](https://www.learnhowtoprogram.com/intermediate-javascript/getting-started-with-javascript/installing-node-js)_
-* _Navigate to the directory inside of which you wish to house this project_
-* _Clone this project with the following git command `$ git clone <https://github.com/marnionrails/bird-neighbors>`_
-* _Navigate to the top level of the repository with the command `$ cd project`_
-* _Recreate project environment and install required dependencies with terminal command `$ npm install`_
-* _Create file for storing environmental variables you want to keep secret (such as an API key)`$ touch .env`_
-* _Create production environment with terminal command `$ npm run build`_
-* _Open project in a development server in the browser of your choice with the command `$ npm run start`_
-* _Lint code with the command `$ npm run lint`_
-* _Run tests in Jest with the command `$ npm test`_
+* Open the terminal on your local machine
+* If [Node.js](https://nodejs.org/en/) and [Nope Package Manager (npm)](https://www.npmjs.com/) are not installed on your local device, follow the instructions [here](https://www.learnhowtoprogram.com/intermediate-javascript/getting-started-with-javascript/installing-node-js)
+* Navigate to the directory inside of which you wish to house this project
+* Clone this project with the following git command `$ git clone <https://github.com/marnionrails/bird-neighbors>`
+* Navigate to the top level of the repository with the command `$ cd project`
+* Recreate project environment and install required dependencies with terminal command `$ npm install`
+* Create file for storing environmental variables you want to keep secret (such as an API key)`$ touch .env`
+* Create production environment with terminal command `$ npm run build`
+* Open project in a development server in the browser of your choice with the command `$ npm run start`
+* Lint code with the command `$ npm run lint`
+* Run tests in Jest with the command `$ npm test`
 
 ## Additional Setup/Installation Note for Windows Users <a id="windows"></a>
 
-_This environment was created on a Mac. For it to work properly in your local environment make the following change:_
-* _Update package.json, line 8 to: `"start": "npm run build & webpack-dev-server --open --mode development",`_
+This environment was created on a Mac. For it to work properly in your local environment make the following change:_
+* _Update package.json, line 8 to: `"start": "npm run build & webpack-dev-server --open --mode development",`
 
 ## Specifications <a id="specs"></a>
 
@@ -98,7 +118,7 @@ _This environment was created on a Mac. For it to work properly in your local en
 ## License <a id="license"></a>
 *[MIT](https://choosealicense.com/licenses/mit/)*
 
-Copyright (c) **_2021 Alex Bertotto, Smita Raj, Tim Roth, Marni Sucher and Jessica Williams_**
+Copyright (c) **2021 Alex Bertotto, Smita Raj, Tim Roth, Marni Sucher and Jessica Williams**
 
 ## Contact Information <a id="contact"></a>
-**_[Alex Bertotto](mailto:ajb5206@gmail.com), [Smita Raj](mailto:smita.raj12@gmail.com), [Tim Roth](mailto:timroth@gmail.com), [Marni Sucher](mailto:suchermarni@gmail.com), [Jessica R. Williams](mailto:jessicarubinwilliams@gmail.com)_**
+**[Alex Bertotto](mailto:ajb5206@gmail.com), [Smita Raj](mailto:smita.raj12@gmail.com), [Tim Roth](mailto:timroth@gmail.com), [Marni Sucher](mailto:suchermarni@gmail.com), [Jessica R. Williams](mailto:jessicarubinwilliams@gmail.com)**
