@@ -9,12 +9,13 @@
 1. [Preview](#preview)
 2. [Technologies Used](#technologies)
 3. [Description](#description)
-4. [Setup/Installation Requirements](#setup)
-5. [Additional Setup/Installation Note for Windows Users](#windows)
-6. [Specifications](#specs)
-7. [Known Bugs](#bugs)
-8. [License](#license)
-9. [Contact Information](#contact)
+4. [API Key Procurement](#api)
+5. [Setup/Installation Requirements](#setup)
+6. [Additional Setup/Installation Note for Windows Users](#windows)
+7. [Specifications](#specs)
+8. [Known Bugs](#bugs)
+9. [License](#license)
+10. [Contact Information](#contact)
 
 ## Preview <a id="preview"></a>
 
@@ -48,6 +49,8 @@
 ## Description <a id="description"></a>
 
 _This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have. Balance between a summary of the project and a tame market pitch._
+
+## API Key Procurement <a id="api"></a>
 
 ## Setup/Installation Requirements <a id="setup"></a>
 
