@@ -19,7 +19,7 @@
 
 ## Preview <a id="preview"></a>
 
-* Direct your browser to a [live version](https://marnionrails.github.io/bird-neighbors) on GitHub Pages.
+Direct your browser to a [live version](https://marnionrails.github.io/bird-neighbors) on GitHub Pages.
 
 ## Technologies Used <a id="technologies"></a>
 
@@ -69,7 +69,7 @@ Listen to the recordings, become familiar with them and then listen as you go ab
 Get to Know Your Bird Neighbors uses three Application Programming Interface, API, calls to return output to the user. The three APIs are the [Geocoding API](https://developers.google.com/maps/documentation/geocoding/start) from Google Enterprise API, [eBird API 2.0](https://documenter.getpostman.com/view/664302/S1ENwy59?version=latest) from Cornell Lab of Ornithology and [xeno-canto API 2.0](https://www.xeno-canto.org/explore/api) from the Xeno-canto Foundation. The Geocoding API and the eBird API 2.0 both require an API key. If you wish to run this project in your local environment, your first task will be to procure these API keys.
 
 ### Geocoding API Procurement Instructions
--_Information about pricing for the Geocoding API:_ As of the launch of Get to Know Your Bird Neighbors in August of 2021,the Geocoding API key is effectively free as long as you stay under the very large monthly call limit (see below for details). However, you will have to enter credit card information, _which will not be charged unless you go over the very generous monthly call limit_, in order to get a key. As of the launch of Get to Know Your Bird Neighbors in August of 2021, creating a Google Cloud console account automatically entitles you to 90-day, $300 free trial to get you started. The call rate for the Geocode API as of August 23, 2021 is $0.005 USD. That means you may make up to 60,000 Geocode API calls with this free trial (this number will be less if you are making other calls to other Google APIs with the same account). Further, according to the Geocoding API Usage and Billing [documentation](https://developers.google.com/maps/documentation/geocoding/usage-and-billing) "For each billing account, for qualifying Google Maps Platform SKUs, a $200 USD Google Maps Platform credit is available each month, and automatically applied to the qualifying SKUs." Geocoding _is_ a "qualifying Google Maps Platform SKUs" as indicated on the Maps Platform [Pricing Sheet](https://cloud.google.com/maps-platform/pricing/sheet). As such, the monthly $200 USD credit is worth up to 40,000 calls (As above, the number of free calls to the Geocoding API will be less if you are also making other calls to other qualifying Google Maps Platform SKUs). You will have to enter credit card information to get an API key but as the pricing is pay as you go, you won't be charged unless you make more than $200 worth of qualifying calls per month.
+\****Information about pricing for the Geocoding API:*** As of the launch of Get to Know Your Bird Neighbors in August of 2021,the Geocoding API key is effectively free as long as you stay under the very large monthly call limit (see below for details). However, you will have to enter credit card information, ***which will not be charged unless you go over the very generous monthly call limit***, in order to get a key. As of the launch of Get to Know Your Bird Neighbors in August of 2021, creating a Google Cloud console account automatically entitles you to 90-day, $300 free trial to get you started. The call rate for the Geocode API as of August 23, 2021 is $0.005 USD. That means you may make up to 60,000 Geocode API calls with this free trial (this number will be less if you are making other calls to other Google APIs with the same account). Further, according to the Geocoding API Usage and Billing [documentation](https://developers.google.com/maps/documentation/geocoding/usage-and-billing) "For each billing account, for qualifying Google Maps Platform SKUs, a $200 USD Google Maps Platform credit is available each month, and automatically applied to the qualifying SKUs." Geocoding ***is*** a "qualifying Google Maps Platform SKUs" as indicated on the Maps Platform [Pricing Sheet](https://cloud.google.com/maps-platform/pricing/sheet). As such, the monthly $200 USD credit is worth up to 40,000 calls (As above, the number of free calls to the Geocoding API will be less if you are also making other calls to other qualifying Google Maps Platform SKUs). You will have to enter credit card information to get an API key but as the pricing is pay as you go, you won't be charged unless you make more than $200 worth of qualifying calls per month.
 
 1. If you don't already have a general Google account you wish to use to obtain an this API key, follow Google's [instructions](https://support.google.com/accounts/answer/27441?hl=en) and create a new general Google account. Remember you username and password.
 2. Create a Google Cloud account by following the [instructions](https://cloud.google.com/apigee/docs/hybrid/v1.3/precog-gcpaccount) in Google Cloud's documentation. The first step will be creating a Google Cloud console account. This is the step in which you will have to enter your credit card information, so have it ready.
@@ -95,6 +95,12 @@ Get to Know Your Bird Neighbors uses three Application Programming Interface, AP
 * Navigate to the top level of the repository with the command `$ cd project`
 * Recreate project environment and install required dependencies with terminal command `$ npm install`
 * Create file for storing environmental variables you want to keep secret (such as an API key)`$ touch .env`
+* Open the project in your text editor
+* Add the following two lines of code to the .env file. Substitute the two API keys you procured by following the instructions above for the "insert-your-API-key-here" portions of the example code.
+  
+  `EBIRD_API_KEY=insert-your-eBird-API-key-here;`
+  
+  `GEOCODE_API_KEY=insert-your-Google-Cloud-Project-API-key-here;`
 * Create production environment with terminal command `$ npm run build`
 * Open project in a development server in the browser of your choice with the command `$ npm run start`
 * Lint code with the command `$ npm run lint`
@@ -102,8 +108,8 @@ Get to Know Your Bird Neighbors uses three Application Programming Interface, AP
 
 ## Additional Setup/Installation Note for Windows Users <a id="windows"></a>
 
-This environment was created on a Mac. For it to work properly in your local environment make the following change:_
-* _Update package.json, line 8 to: `"start": "npm run build & webpack-dev-server --open --mode development",`
+This environment was created on a Mac. For it to work properly in your local environment make the following change:
+* Update package.json, line 8 to: `"start": "npm run build & webpack-dev-server --open --mode development",`
 
 ## Specifications <a id="specs"></a>
 
