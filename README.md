@@ -1,7 +1,3 @@
-## _THIS PROJECT IS AN ENVIRONMENT TEMPLATE FOR FUTURE PROJECTS_
-
-## _This project is not in a complete or portfolio ready state, and should not be considered representational of professional work._
-
 # _Application Name_
 
 #### _Brief description of application_
