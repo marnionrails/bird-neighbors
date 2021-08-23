@@ -111,7 +111,16 @@ This environment was created on a Mac. For it to work properly in your local env
 * Update package.json, line 8 to: `"start": "npm run build & webpack-dev-server --open --mode development",`
 
 ## Known Bugs <a id="bugs"></a>
-* 
+Meet Your Bird Neighbors utilizes the xeno-canto API, which is not CORS-enabled. As this application does not use a back end server, we got around the CORS protocol by using a proxy server. We created an instance of [CORS-Anywhere](https://github.com/Rob--W/cors-anywhere) hosted for free on [Heroku](https://www.heroku.com/). We chose CORS-anywhere as it was the only solution we found that matched our current coding skills. If your curious, we followed these [instructions](https://www.youtube.com/watch?v=UjqzsNeSZ1k) on YouTube to create our instance of CORS-anywhere. Our proxy server works just fine, however there is an alleged security issue with any instance of CORS-Anywhere that we feel you should be aware of in case you were to consider also using this workaround to CORS protocol. Security specialists at [Certik](https://www.certik.io/about/#home) have taken issue with CORS-Anywhere. Certik describes their expertise as follows:
+>Founded in 2018 by professors of Yale University and Columbia University, CertiK is a pioneer in blockchain security, utilizing best-in-class AI technology to secure and monitor blockchain protocols and smart contracts. CertiK’s mission is to secure the cyber world. Starting with blockchain, CertiK applies cutting-edge innovations from academia into enterprise, enabling mission-critical applications to be built with security and correctness.
+
+In this [article](https://www.certik.io/blog/technology/cors-anywhere-dangers-of-misconfigured-third-party-software) CertiK explains that a CORS-Anywhere proxy server may be used by a hacker to execute a server-side request forgery or SSRF. According to CertiK:
+>* Common ways to utilize SSRF vulnerability
+>* Perform port scan, network reconnaissance in the internal network.
+>* Send requests to internal server’s APIs.
+>* Access sensitive resources in the internal network.
+
+We chose to use CORS-Anywhere despite this but feel it is our duty to inform anyone assessing our project of this information.
 
 ## License <a id="license"></a>
 *[MIT](https://choosealicense.com/licenses/mit/)*
