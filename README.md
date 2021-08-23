@@ -27,6 +27,7 @@
 * _Babel/plugin-transform-modules-commonjs 7.6.0_
 * _Bootstrap 4.5.0_
 * _clean-webpack-plugin 3.0.0_
+* _CORS-Anywhere_
 * _CSS_
 * _css-loader 3.2.0_
 * _dotenv-webpack@2.0.0_
@@ -35,6 +36,8 @@
 * _eslint-loader 3.0.0_
 * _file-loader 1.1.6_
 * _Geocoding API_
+* _gh-pages 3.2.3_
+* _Heroku_
 * _HTML5_
 * _html-loader 0.5.5_
 * _html-webpack-plugin 3.2.0_
