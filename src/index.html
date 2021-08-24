@@ -24,13 +24,29 @@
       </div>
     </div> 
     <div class="showErrors"></div>
-    <figure>
-      <figcaption>Listen to <span id="common-name"></span></figcaption>
-      <audio 
-        controls
-        id="sound">
-      </audio>
-    </figure>
+    <div id="display-sounds">
+      <div>
+        <p>Listen to <span id="common-name"></span></p>
+        <div id="songs-output">
+          <figure>
+            <figcaption>Song</figcaption>
+            <audio 
+              controls
+              id="song">
+            </audio>
+          </figure>
+        </div>
+        <div id="calls-output">
+          <figure>
+            <figcaption>Call</figcaption>
+            <audio 
+              controls
+              id="call">
+            </audio>
+          </figure>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
