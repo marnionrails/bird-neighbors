@@ -47,7 +47,7 @@ $(document).ready(function() {
         lat = geocodeResponse.results[0].geometry.location.lat;
         lng = geocodeResponse.results[0].geometry.location.lng;
         rad = 30;
-        return NearbyService.nearby(lat, lng, rad);
+        return NearbyService.getNearbyBirds(lat, lng, rad);
       })
       .catch(function(error) {
         $('.showErrors').text(`There was an error processing your zip code: ${error}`);
