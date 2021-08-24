@@ -6,16 +6,28 @@ import GeocodeService  from './services/geocode-service.js';
 import GeocodeErrorHandling from './geocode-error-handling.js';
 import NearbyService from './services/ebird-service.js';
 import Validation from './validation.js';
-// import BirdSoundsService from './services/bird-sounds-service.js';
-// import DataParsing from './data-parsing.js';
+import BirdSoundsService from './services/bird-sounds-service.js';
+import DataParsing from './data-parsing.js';
 
-// function listNearbyBirds(response){
-//   if (response) {
-//     for(let i=0; i<response.length; i++){
-//       $("ul.showNearBirds").append(`<li> ${response[i].comName} </li>`);
-//     }
-//   }
-// }
+function listNearbyBirds(response){
+  if (response) {
+    for(let i=0; i<response.length; i++){
+      $("ul.showNearBirds").append(`<li> ${response[i].comName} </li>`);
+    }
+  }
+}
+
+function displayBirdSounds(response) {
+  const songsToOutput = DataParsing.filterForSongs(response);
+  const callsToOutput = DataParsing.filterForCalls(response);
+  $("#sound").attr("src", songsToOutput[0].file);
+  console.log(callsToOutput);
+  // $("#callsToOutput").append(callsToOutput);
+}
+
+function displayErrors(error) {
+  $(".showErrors").text(`${error}}`);
+}
 
 $(document).ready(function() {
   
@@ -28,8 +40,8 @@ $(document).ready(function() {
     let lat = "";
     let lng = "";
     let rad = "";
-    // let sciName = "";
-    // let comName = "";
+    let sciName = "";
+    let comName = "";
     try {
       Validation.validation(zipCode);
     } catch(error) {
@@ -52,29 +64,24 @@ $(document).ready(function() {
       .catch(function(error) {
         $('.showErrors').text(`There was an error processing your zip code: ${error}`);
       })
-      // .then(function(nearbyServiceResponse) {
-      //   $(".card").show();
-      //   $(".showErrors").hide();
-      //   listNearbyBirds(nearbyServiceResponse);
-      //   sciName = nearbyServiceResponse[0].sciName;
-      //   comName = nearbyServiceResponse[0].comName;
-      //   $("#common-name").text(comName);
-      //   return BirdSoundsService.getSounds(sciName);
-      // })
-      // .catch(function(error) {
-      //   $('.showErrors').text(`There was an error with getting your local birds: ${error}`);
-      // })
-      // .then(function(birdSoundsResponse) {
-      //   const birdSoundsBody = JSON.parse(birdSoundsResponse);
-      //   // $('#outputSounds').attr("src", birdSoundsBody.recordings[0].url);
-      //   const songsToOutput = DataParsing.filterForSongs(birdSoundsBody);
-      //   const callsToOutput = DataParsing.filterForCalls(birdSoundsBody);
-      //   $("#sound").attr("src", songsToOutput[0].file);
-      //   console.log(callsToOutput);
-      //   // $("#callsToOutput").append(callsToOutput);
-      // }, function(error) {
-      //   $('.showErrors').text(`There was an error with processing your bird sound request: ${error}`);
-      // });
+      .then(function(nearbyServiceResponse) {
+        $(".card").show();
+        $(".showErrors").hide();
+        listNearbyBirds(nearbyServiceResponse);
+        sciName = nearbyServiceResponse[0].sciName;
+        comName = nearbyServiceResponse[0].comName;
+        $("#common-name").text(comName);
+        return BirdSoundsService.getSounds(sciName);
+      })
+      .catch(function(error) {
+        $('.showErrors').text(`There was an error with getting your local birds: ${error}`);
+      })
+      .then(function(birdSoundsResponse) {
+        const birdSoundsBody = JSON.parse(birdSoundsResponse);
+        displayBirdSounds(birdSoundsBody);
+      }, function(error) {
+        $('.showErrors').text(`There was an error with processing your bird sound request: ${error}`);
+      });
   });
 });
 
