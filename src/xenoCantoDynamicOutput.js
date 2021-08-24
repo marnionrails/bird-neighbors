@@ -13,5 +13,18 @@ export default class DynamicSoundDisplay {
     </figure>`;
     outputDiv.html(htmlForSongOutput);
   }
+
+  static CallOutput() {
+    let outputDiv = $("#calls-output");
+    let htmlForCallOutput = `
+    <figure>
+      <figcaption>Call</figcaption>
+      <audio 
+        controls
+        id="call">
+      </audio>
+    </figure>`;
+    outputDiv.html(htmlForCallOutput);
+  }
 } 
 

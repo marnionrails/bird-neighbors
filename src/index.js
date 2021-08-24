@@ -75,6 +75,7 @@ $('#zipcode').click(function() {
         throw Error(`xeno-canto API error: ${birdSoundsResponse.message}`);
       }
       DynamicSoundDisplay.SongOutput();
+      DynamicSoundDisplay.CallOutput();
       displayBirdSounds(birdSoundsResponse, comName);
     })
     .catch(function(error) {
