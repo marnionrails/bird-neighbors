@@ -26,7 +26,7 @@ function displayBirdSounds(response) {
 }
 
 function displayErrors(error) {
-  $(".showErrors").text(`${error}}`);
+  $(".showErrors").text(`${error}`);
 }
   
   $('#zipcode').click(function() {
