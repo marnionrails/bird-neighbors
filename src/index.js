@@ -30,6 +30,7 @@ $('#zipcode').click(function() {
   let rad = "";
   let sciName = "";
   let comName = "";
+  let eBirdResponse = "";
   try {
     $(".showErrors").hide();
     Validation.validation(zipCode);
@@ -56,6 +57,7 @@ $('#zipcode').click(function() {
         throw Error(`eBird API error: ${nearbyServiceResponse.message}`);
       }
       listNearbyBirds(nearbyServiceResponse);
+      eBirdResponse = nearbyServiceResponse;
       sciName = nearbyServiceResponse[0].sciName;
       comName = nearbyServiceResponse[0].comName;
       return BirdSoundsService.getSounds(sciName);
@@ -64,7 +66,7 @@ $('#zipcode').click(function() {
       if (birdSoundsResponse instanceof Error) {
         throw Error(`xeno-canto API error: ${birdSoundsResponse.message}`);
       }
-      DynamicSoundDisplay.SongOutput();
+      DynamicSoundDisplay.SongOutput(eBirdResponse, birdSoundsResponse);
       DynamicSoundDisplay.CallOutput();
       DynamicSoundDisplay.displayBirdSounds(birdSoundsResponse, comName);
     })
