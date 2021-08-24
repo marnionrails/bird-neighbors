@@ -8,7 +8,7 @@ export default class GeocodeService {
         return response.json();
       })
       .catch(function(error) {
-        return error;
+        return Error(error);
       });
   }
 }

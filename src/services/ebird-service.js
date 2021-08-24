@@ -12,7 +12,7 @@ export default class NearbyService {
         return response.json();
       })
       .catch(function(error) {
-        return error;
+        return Error(error);
       });
   }
 }
