@@ -22,9 +22,8 @@ function displayBirdSounds(response, commonName) {
   $("#common-name").text(commonName);
   const songsToOutput = DataParsing.filterForSongs(response);
   const callsToOutput = DataParsing.filterForCalls(response);
-  $("#sound").attr("src", songsToOutput[0].file);
-  console.log(callsToOutput);
-  // $("#callsToOutput").append(callsToOutput);
+  $("#song").attr("src", songsToOutput[0].file);
+  $("#call").attr("src", callsToOutput[0].file);
 }
 
 function displayErrors(error) {
