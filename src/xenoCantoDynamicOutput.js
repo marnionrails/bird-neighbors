@@ -1,7 +1,3 @@
-// export const dynamicResponseOutput = () => {
+export const dynamicResponseOutput = () => {
 
-// }
-
-// export const dynamicErrorOutput = () => {
-
-// }
+}
