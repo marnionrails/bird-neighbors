@@ -19,6 +19,7 @@ function listNearbyBirds(response){
 }
 
 function displayBirdSounds(response, commonName) {
+  $('#display-sounds').show();
   $("#common-name").text(commonName);
   const songsToOutput = DataParsing.filterForSongs(response);
   const callsToOutput = DataParsing.filterForCalls(response);
