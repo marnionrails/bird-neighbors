@@ -10,6 +10,8 @@ import BirdSoundsService from './services/bird-sounds-service.js';
 import DataParsing from './data-parsing.js';
 
 function listNearbyBirds(response){
+  $(".card").show();
+  $("ul.showNearBirds").text('');
   if (response) {
     for(let i=0; i<response.length; i++){
       $("ul.showNearBirds").append(`<li> ${response[i].comName} </li>`);
@@ -30,10 +32,6 @@ function displayErrors(error) {
 }
   
   $('#zipcode').click(function() {
-    $('.showErrors').show();
-    $(".card").show();
-    $("ul.showNearBirds").text('');
-    
     let zipCode = $('#zipCode').val();
     let lat = "";
     let lng = "";
