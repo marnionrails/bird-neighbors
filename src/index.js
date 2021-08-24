@@ -2,7 +2,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import GeocodeService  from './services/geocode.js';
+import GeocodeService  from './services/geocode-service.js';
 import GeocodeErrorHandling from './geocode-error-handling.js';
 import NearbyService from './services/ebird-service.js';
 import Validation from './validation.js';
@@ -36,7 +36,7 @@ $(document).ready(function() {
       $(".showErrors").text(error.message);
       throw new Error("Invalid zip code length. Zip codes must be 5-digits");
     }
-    Geocode.getCoordinates(zipCode)
+    GeocodeService.getCoordinates(zipCode)
       .then(function(geocodeResponse) {
         try {
           GeocodeErrorHandling.assessResponseStatus(geocodeResponse);
