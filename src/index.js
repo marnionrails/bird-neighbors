@@ -7,6 +7,7 @@ import NearbyService from './services/ebird-service.js';
 import Validation from './validation.js';
 import BirdSoundsService from './services/bird-sounds-service.js';
 import DataParsing from './data-parsing.js';
+import { dynamicSongOutput } from './xenoCantoDynamicOutput.js';
 
 function listNearbyBirds(response){
   $(".card").show();
@@ -73,6 +74,7 @@ $('#zipcode').click(function() {
       if (birdSoundsResponse instanceof Error) {
         throw Error(`xeno-canto API error: ${birdSoundsResponse.message}`);
       }
+      dynamicSongOutput();
       displayBirdSounds(birdSoundsResponse, comName);
     })
     .catch(function(error) {
