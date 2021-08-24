@@ -17,7 +17,6 @@ function listNearbyBirds(response){
 }
 
 $(document).ready(function() {
-  
   $('#zipcode').click(function() {
     $('.showErrors').show();
     $(".card").show();
@@ -44,8 +43,9 @@ $(document).ready(function() {
         listNearbyBirds(nearbyServiceResponse) 
         sciName = nearbyServiceResponse[0].sciName;
         comName = nearbyServiceResponse[0].comName;
-        $("#common-name").text(comName);
         $("#player").show();
+        $("#common-name").text(comName);
+       
         return BirdSoundsService.getSounds(sciName);
       })
       .catch(function(error) {
@@ -53,14 +53,13 @@ $(document).ready(function() {
       })
       .then(function(birdSoundsResponse) {
         const birdSoundsBody = JSON.parse(birdSoundsResponse);
-        // $('#outputSounds').attr("src", birdSoundsBody.recordings[0].url);
+        console.log(birdSoundsBody);
         const songsToOutput = DataParsing.filterForSongs(birdSoundsBody);
         const callsToOutput = DataParsing.filterForCalls(birdSoundsBody);
-      
+        console.log(songsToOutput[0])
+          console.log(songsToOutput[0]);
         $("#sound").attr("src", songsToOutput[0].file);
         console.log(callsToOutput);
-        // $("#callsToOutput").append(callsToOutput);
-        
       }, function(error) {
         $('#showErrors').text(`There was an error with processing your bird sound request: ${error}`);
       });
