@@ -88,7 +88,7 @@ Meet Your Bird Neighbors uses three Application Programming Interface, API, call
 ## Setup/Installation Requirements <a id="setup"></a>
 
 * Open the terminal on your local machine
-* If [Node.js](https://nodejs.org/en/) and [Nope Package Manager (npm)](https://www.npmjs.com/) are not installed on your local device, follow the instructions [here](https://www.learnhowtoprogram.com/intermediate-javascript/getting-started-with-javascript/installing-node-js)
+* If [Node.js](https://nodejs.org/en/) and [Node Package Manager (npm)](https://www.npmjs.com/) are not installed on your local device, follow the instructions [here](https://www.learnhowtoprogram.com/intermediate-javascript/getting-started-with-javascript/installing-node-js)
 * Navigate to the directory inside of which you wish to house this project
 * Clone this project with the following git command `$ git clone <https://github.com/marnionrails/bird-neighbors>`
 * Navigate to the top level of the repository with the command `$ cd project`
