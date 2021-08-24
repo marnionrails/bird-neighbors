@@ -28,8 +28,6 @@ function displayBirdSounds(response) {
 function displayErrors(error) {
   $(".showErrors").text(`${error}}`);
 }
-
-$(document).ready(function() {
   
   $('#zipcode').click(function() {
     $('.showErrors').show();
@@ -83,6 +81,5 @@ $(document).ready(function() {
         $('.showErrors').text(`There was an error with processing your bird sound request: ${error}`);
       });
   });
-});
 
 
