@@ -1,18 +1,15 @@
 export default class BirdSoundsService {
-  static getSounds(species) {
-    return new Promise(function(resolve, reject) {
-      let request = new XMLHttpRequest();
-      const concatenatedSpecies = species.split(" ").join("+");
-      const url = `https://babysfirstproxy.herokuapp.com/https://www.xeno-canto.org/api/2/recordings?query=${concatenatedSpecies}`;
-      request.onload = function() {
-        if (this.status === 200) {
-          resolve(request.response);
-        } else {
-          reject(request.response);
-        }
-      };
-      request.open("GET", url, true);
-      request.send();    
-    });
+  static async getSounds(species) {
+    const concatenatedSpecies = species.split(" ").join("+");
+    return fetch(`https://babysfirstproxy.herokuapp.com/https://www.xeno-canto.org/api/2/recordings?query=${concatenatedSpecies}`)
+      .then(function(response) {
+      if (!response.ok) {
+        throw Error(response.status);
+      }
+      return response.json();
+    })
+    .catch(function(error) {
+      return Error(error);
+    })
   }
 }
