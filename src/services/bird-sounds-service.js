@@ -4,7 +4,7 @@ export default class BirdSoundsService {
     return fetch(`https://babysfirstproxy.herokuapp.com/https://www.xeno-canto.org/api/2/recordings?query=${concatenatedSpecies}`)
       .then(function(response) {
         if (!response.ok) {
-          throw Error(response.status);
+          throw Error(`${response.status}: ${response.statusText}`);
         }
         return response.json();
       })

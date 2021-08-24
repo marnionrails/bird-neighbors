@@ -7,7 +7,7 @@ export default class NearbyService {
     })
       .then(function(response) {
         if (!response.ok) {
-          throw Error(response.statusText);
+          throw Error((`${response.status}: ${response.statusText}`));
         }
         return response.json();
       })
@@ -16,6 +16,3 @@ export default class NearbyService {
       });
   }
 }
-
-
-
