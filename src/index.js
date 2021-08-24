@@ -28,6 +28,7 @@ function displayBirdSounds(response, commonName) {
 }
 
 function displayErrors(error) {
+  $(".showErrors").show();
   $(".showErrors").text(`${error}`);
 }
   
@@ -41,8 +42,9 @@ $('#zipcode').click(function() {
   try {
     $(".showErrors").hide();
     Validation.validation(zipCode);
-  } catch(error) {
-    $(".showErrors").text(error.message);
+  } 
+  catch(error) {
+    displayErrors(error);
     throw new Error("Invalid zip code length. Zip codes must be 5-digits");
   }
   GeocodeService.getCoordinates(zipCode)
