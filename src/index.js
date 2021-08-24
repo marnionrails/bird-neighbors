@@ -2,7 +2,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import Geocode  from './services/geocode.js';
+import GeocodeService  from './services/geocode.js';
 import GeocodeErrorHandling from './geocode-error-handling.js';
 import NearbyService from './services/ebird-service.js';
 import Validation from './validation.js';

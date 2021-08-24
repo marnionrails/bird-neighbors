@@ -1,4 +1,4 @@
-export default class Geocode {
+export default class GeocodeService {
   static getCoordinates(zipCode) {
     return fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${zipCode}&key=${process.env.GEOCODE_API_KEY}`)
       .then(function(response) {
