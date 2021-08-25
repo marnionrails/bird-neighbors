@@ -16,6 +16,7 @@ function listNearbyBirds(response){
       $("ul.showNearBirds").append(`<li> ${response[i].comName} </li>`);
     }
   }
+  $("ul.showNearBirds").append(`<br><p>This list of birds was supplied by the Cornell Lab of Ornithology's eBird database.</p>`);
 }
 
 function displayErrors(error) {

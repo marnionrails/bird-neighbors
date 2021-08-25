@@ -55,7 +55,7 @@ Direct your browser to a [live version](https://marnionrails.github.io/bird-neig
 
 Birds are some of the most common wild animals with which human civilization intersects. Birds are found on every continent and inhabit all the places humans live: urban, suburban, and rural. Birds are not always easy to see or to see for long to get a good look. You're more likely to hear a bird than see it.
 
-The Baader-Meinhof Phenomenon, also known as frequency illusion, explains that human brains reinforce recently acquired information by paying more attention to subsequent occurrences of or references to that newly acquired information. Applying this to the context of bird songs and calls we may say, by becoming familiar with the songs and calls of your local birds will allow you to actually register and recognize those sounds when birds make them around you. The presence of those birds won't be more frequent (other than expected seasonal population changes of migratory species) but experientially you will become more aware of birds singing and calling around you.
+The Baader-Meinhof Phenomenon, also known as frequency illusion, explains that human brains reinforce recently acquired information by paying more attention to subsequent occurrences of or references to that newly acquired information. Applying this to the context of bird songs and calls we may say, becoming familiar with the songs and calls of your local birds will allow you to actually register and recognize those sounds when birds make them around you. The presence of those birds won't be more frequent (other than expected seasonal population changes of migratory species) but experientially you will become more aware of birds singing and calling around you.
 
 Learning to recognize the songs and calls of your local birds with our application, Meet Your Bird Neighbors, will enhance your awareness of and appreciation for the world around you while also tuning your attention to all the different bird species around you.
 
@@ -72,9 +72,9 @@ Meet Your Bird Neighbors uses three Application Programming Interface, API, call
 
 1. If you don't already have a general Google account you wish to use to obtain an this API key, follow Google's [instructions](https://support.google.com/accounts/answer/27441?hl=en) and create a new general Google account. Remember you username and password.
 2. Create a Google Cloud account by following the [instructions](https://cloud.google.com/apigee/docs/hybrid/v1.3/precog-gcpaccount) in Google Cloud's documentation. The first step will be creating a Google Cloud console account. This is the step in which you will have to enter your credit card information, so have it ready.
-3. Google assigns API keys to individual projects withing your account. You may either use the default "My First Project" or create a Google Cloud project by following the[instructions](https://cloud.google.com/apigee/docs/hybrid/v1.3/precog-gcpproject) in Google Cloud's documentation.
-4. In your chosen project withing the Google Cloud UI enable the Geocoding API by using the Navigation menu to select "APIs & Services" > "Library". In the API Library view search for "Geocoding API." When the Geocoding API is returned in the search results, click on it. You will be redirected to the Geocoding API page. Click the "ENABLE" button.
-5. To get actually get your API key, use the Navigation menu to select "Credentials." Once redirected to the Credentials page, click "+CREATE CREDENTIALS" > "API key" at the top of the page. While it is not difficult to navigate back to this page, you may wish to record your API key. If desired, click the button offered to restrict your API keys use in a production environment.
+3. Google assigns API keys to individual projects withing your account. You may either use the default "My First Project" or create a Google Cloud project by following the [instructions](https://cloud.google.com/apigee/docs/hybrid/v1.3/precog-gcpproject) in Google Cloud's documentation.
+4. To enable the Geocode API, in your chosen project withing the Google Cloud UI enable the Geocoding API by using the Navigation menu to select "APIs & Services" > "Library". In the API Library view search for "Geocoding API." When the Geocoding API is returned in the search results, click on it. You will be redirected to the Geocoding API page. Click the "ENABLE" button.
+5. To get your API key, use the Navigation menu to select "Credentials." Once redirected to the Credentials page, click "+CREATE CREDENTIALS" > "API key" at the top of the page. While it is not difficult to navigate back to this page, you may wish to record your API key. If desired, click the button offered to restrict your API keys use in a production environment.
 
 ### eBird API 2.0 Procurement Instructions
 
@@ -88,7 +88,7 @@ Meet Your Bird Neighbors uses three Application Programming Interface, API, call
 ## Setup/Installation Requirements <a id="setup"></a>
 
 * Open the terminal on your local machine
-* If [Node.js](https://nodejs.org/en/) and [Nope Package Manager (npm)](https://www.npmjs.com/) are not installed on your local device, follow the instructions [here](https://www.learnhowtoprogram.com/intermediate-javascript/getting-started-with-javascript/installing-node-js)
+* If [Node.js](https://nodejs.org/en/) and [Node Package Manager (npm)](https://www.npmjs.com/) are not installed on your local device, follow the instructions [here](https://www.learnhowtoprogram.com/intermediate-javascript/getting-started-with-javascript/installing-node-js)
 * Navigate to the directory inside of which you wish to house this project
 * Clone this project with the following git command `$ git clone <https://github.com/marnionrails/bird-neighbors>`
 * Navigate to the top level of the repository with the command `$ cd project`
