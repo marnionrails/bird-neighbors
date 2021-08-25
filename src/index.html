@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Know Your Bird Neighbors</title>
+  <title>Meet Your Bird Neighbors</title>
 </head>
 <body>
   <div class="container">
-    <h1>Get to know your bird neighbors</h1>
+    <img src="assets/images/bird.jpeg" id="bg" alt="">
     <div class="zip">
       <div class="row">
         <div class = "col">
+          <h1>Meet your bird neighbors</h1>
           <label for="zipcode">Enter your 5 digit zip code:</label>
-          <input id="zipCode" type="text" onkeypress= " return event.charCode > 47 && event.charCode < 58;" pattern="[0-9]{5}" required></input>
+          <input id="zipCode" type="text" onkeypress= " return event.charCode > 47 && event.charCode < 58;" maxlength="5" required></input>
           <button id="zipcode" class="btn-primary">Submit</button>
         </div>
         <div class = "col">
