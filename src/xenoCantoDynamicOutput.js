@@ -5,8 +5,6 @@ export default class DynamicSoundDisplay {
   static displayBirdSounds(xenoCantoResponse, commonName) {
     const callsToOutput = DataParsing.filterForCalls(xenoCantoResponse);
     $("#common-name").text(commonName);
-    const songsToOutput = DataParsing.filterForSongs(response);
-    const callsToOutput = DataParsing.filterForCalls(response);
     $("#call1").attr("src", callsToOutput[0].file);
     $("#call2").attr("src", callsToOutput[1].file);
   }
@@ -38,15 +36,6 @@ export default class DynamicSoundDisplay {
       $(`#song2${concatenatedCommonName}`).attr("src", songsToOutput[1].file);
     });
     $('#display-sounds').show();
-    let htmlForSongOutput = `
-    <figure>
-      <figcaption>Song 1</figcaption>
-      <audio 
-        controls
-        id="song1">
-      </audio>
-    </figure>
-    `;
     
     outputDiv.html(htmlForSongOutput);
   }
