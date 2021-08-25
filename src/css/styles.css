@@ -23,3 +23,7 @@ ul{
 .showErrors{
   color: darkred;
 }
+
+#display-sounds {
+  display: none;
+}

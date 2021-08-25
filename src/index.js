@@ -6,7 +6,7 @@ import GeocodeService  from './services/geocode-service.js';
 import NearbyService from './services/ebird-service.js';
 import Validation from './validation.js';
 import BirdSoundsService from './services/bird-sounds-service.js';
-import DataParsing from './data-parsing.js';
+import DynamicSoundDisplay from './xenoCantoDynamicOutput.js';
 
 function listNearbyBirds(response){
   $(".card").show();
@@ -16,15 +16,6 @@ function listNearbyBirds(response){
       $("ul.showNearBirds").append(`<li> ${response[i].comName} </li>`);
     }
   }
-}
-
-function displayBirdSounds(response, commonName) {
-  $("#common-name").text(commonName);
-  const songsToOutput = DataParsing.filterForSongs(response);
-  const callsToOutput = DataParsing.filterForCalls(response);
-  $("#sound").attr("src", songsToOutput[0].file);
-  console.log(callsToOutput);
-  // $("#callsToOutput").append(callsToOutput);
 }
 
 function displayErrors(error) {
@@ -73,7 +64,9 @@ $('#zipcode').click(function() {
       if (birdSoundsResponse instanceof Error) {
         throw Error(`xeno-canto API error: ${birdSoundsResponse.message}`);
       }
-      displayBirdSounds(birdSoundsResponse, comName);
+      DynamicSoundDisplay.SongOutput();
+      DynamicSoundDisplay.CallOutput();
+      DynamicSoundDisplay.displayBirdSounds(birdSoundsResponse, comName);
     })
     .catch(function(error) {
       displayErrors(error.message);
