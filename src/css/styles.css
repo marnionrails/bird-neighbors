@@ -30,6 +30,7 @@ ul {
 
 .showErrors {
   color: darkred;
+  position: absolute;
 }
 
 #display-sounds {
