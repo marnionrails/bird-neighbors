@@ -7,20 +7,30 @@ export default class DynamicSoundDisplay {
     $("#common-name").text(commonName);
     const songsToOutput = DataParsing.filterForSongs(response);
     const callsToOutput = DataParsing.filterForCalls(response);
-    $("#song").attr("src", songsToOutput[0].file);
-    $("#call").attr("src", callsToOutput[0].file);
+    $("#song1").attr("src", songsToOutput[0].file);
+    $("#song2").attr("src", songsToOutput[1].file);
+    $("#call1").attr("src", callsToOutput[0].file);
+    $("#call2").attr("src", callsToOutput[1].file);
   }
   
   static SongOutput() {
     let outputDiv = $("#songs-output");
     let htmlForSongOutput = `
     <figure>
-      <figcaption>Song</figcaption>
+      <figcaption>Song 1</figcaption>
       <audio 
         controls
-        id="song">
+        id="song1">
+      </audio>
+    </figure>
+    <figure>
+      <figcaption>Song 2</figcaption>
+      <audio 
+        controls
+        id="song2">
       </audio>
     </figure>`;
+    
     outputDiv.html(htmlForSongOutput);
   }
 
@@ -28,12 +38,19 @@ export default class DynamicSoundDisplay {
     let outputDiv = $("#calls-output");
     let htmlForCallOutput = `
     <figure>
-      <figcaption>Call</figcaption>
+      <figcaption>Call 1</figcaption>
       <audio 
         controls
-        id="call">
+        id="call1">
       </audio>
-    </figure>`;
+    </figure>
+     <figure>
+     <figcaption>Call 2</figcaption>
+     <audio 
+       controls
+       id="call2">
+     </audio>
+   </figure>`;
     outputDiv.html(htmlForCallOutput);
   }
 } 
