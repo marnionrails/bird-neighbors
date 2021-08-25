@@ -8,6 +8,14 @@ import Validation from './validation.js';
 import BirdSoundsService from './services/bird-sounds-service.js';
 import DynamicSoundDisplay from './xenoCantoDynamicOutput.js';
 
+function clearFields() {
+  $('#zipCode').val("");
+  $('.showErrors').text("");
+  $(".card").hide();
+  $('#display-sounds').hide();
+  $('#xcAttribution').remove();
+}
+
 function listNearbyBirds(response){
   $(".card").show();
   $("ul.showNearBirds").text('');
@@ -31,6 +39,7 @@ $('#zipcode').click(function() {
   let rad = "";
   let sciName = "";
   let comName = "";
+  clearFields();
   try {
     $(".showErrors").hide();
     Validation.validation(zipCode);
