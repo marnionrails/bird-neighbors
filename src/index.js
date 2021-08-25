@@ -30,7 +30,15 @@ $(document).ready(function() {
     let rad = "";
     let sciName = "";
     let comName = "";
-    Validation.validation(zipCode);
+    try {
+      Validation.validation(zipCode);
+    } catch(error) {
+      $(".card").hide();
+      $(".showErrors").text(error.message);
+      throw new Error("Invalid zip code length. Zip codes must be 5-digits");
+    }
+    $(".card").show();
+    $(".showErrors").hide();
     Geocode.getCoordinates(zipCode)
       .then(function(geocodeResponse) {
         const geocodeBody = JSON.parse(geocodeResponse);
@@ -65,3 +73,5 @@ $(document).ready(function() {
       });
   });
 });
+
+
