@@ -58,7 +58,7 @@ $('#zipcode').click(function() {
       }
       lat = geocodeResponse.results[0].geometry.location.lat;
       lng = geocodeResponse.results[0].geometry.location.lng;
-      rad = 30;
+      rad = 10;
       return NearbyService.getNearbyBirds(lat, lng, rad);
     })
     .then(function(nearbyServiceResponse) {
