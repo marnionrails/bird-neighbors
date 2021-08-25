@@ -2,76 +2,80 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import Geocode  from './geocode.js';
-import NearbyService from './ebird-service.js';
+import GeocodeService  from './services/geocode-service.js';
+import NearbyService from './services/ebird-service.js';
 import Validation from './validation.js';
-import BirdSoundsService from './bird-sounds-service.js';
+import BirdSoundsService from './services/bird-sounds-service.js';
 import DataParsing from './data-parsing.js';
 
 function listNearbyBirds(response){
+  $(".card").show();
+  $("ul.showNearBirds").text('');
   if (response) {
-    //console.log(response);
     for(let i=0; i<response.length; i++){
       $("ul.showNearBirds").append(`<li> ${response[i].comName} </li>`);
     }
   }
 }
 
-$(document).ready(function() {
+function displayBirdSounds(response, commonName) {
+  $("#common-name").text(commonName);
+  const songsToOutput = DataParsing.filterForSongs(response);
+  const callsToOutput = DataParsing.filterForCalls(response);
+  $("#sound").attr("src", songsToOutput[0].file);
+  console.log(callsToOutput);
+  // $("#callsToOutput").append(callsToOutput);
+}
+
+function displayErrors(error) {
+  $(".showErrors").show();
+  $(".showErrors").text(`${error}`);
+}
   
-  $('#zipcode').click(function() {
-    $('.showErrors').show();
-    $(".card").show();
-    $("ul.showNearBirds").text('');
-    
-    let zipCode = $('#zipCode').val();
-    let lat = "";
-    let lng = "";
-    let rad = "";
-    let sciName = "";
-    let comName = "";
-    try {
-      Validation.validation(zipCode);
-    } catch(error) {
-      $(".card").hide();
-      $(".showErrors").text(error.message);
-      throw new Error("Invalid zip code length. Zip codes must be 5-digits");
-    }
-    $(".card").show();
+$('#zipcode').click(function() {
+  let zipCode = $('#zipCode').val();
+  let lat = "";
+  let lng = "";
+  let rad = "";
+  let sciName = "";
+  let comName = "";
+  try {
     $(".showErrors").hide();
-    Geocode.getCoordinates(zipCode)
-      .then(function(geocodeResponse) {
-        const geocodeBody = JSON.parse(geocodeResponse);
-        lat = geocodeBody.results[0].geometry.location.lat;
-        lng = geocodeBody.results[0].geometry.location.lng;
-        rad = 30;
-        return NearbyService.nearby(lat, lng, rad);
-      }, function(error) {
-        $('.showErrors').text(`There was an error processing your zip code; ${error}`);
-      })
-      .then(function(nearbyServiceResponse) {
-        listNearbyBirds(nearbyServiceResponse);
-        sciName = nearbyServiceResponse[0].sciName;
-        comName = nearbyServiceResponse[0].comName;
-        $("#common-name").text(comName);
-        return BirdSoundsService.getSounds(sciName);
-      })
-      .catch(function(error) {
-        $('.showErrors').text(`There was an error with getting your local birds: ${error}`);
-      })
-      .then(function(birdSoundsResponse) {
-        const birdSoundsBody = JSON.parse(birdSoundsResponse);
-        // $('#outputSounds').attr("src", birdSoundsBody.recordings[0].url);
-        const songsToOutput = DataParsing.filterForSongs(birdSoundsBody);
-        const callsToOutput = DataParsing.filterForCalls(birdSoundsBody);
-
-        $("#sound").attr("src", songsToOutput[0].file);
-        console.log(callsToOutput);
-        // $("#callsToOutput").append(callsToOutput);
-      }, function(error) {
-        $('#showErrors').text(`There was an error with processing your bird sound request: ${error}`);
-      });
-  });
+    Validation.validation(zipCode);
+  } 
+  catch(error) {
+    displayErrors(error);
+    throw new Error("Invalid zip code length. Zip codes must be 5-digits");
+  }
+  GeocodeService.getCoordinates(zipCode)
+    .then(function(geocodeResponse) {
+      if (geocodeResponse instanceof Error) {
+        throw Error(`Geocode API error: ${geocodeResponse.message}`);
+      }
+      if (geocodeResponse.status !== "OK") {
+        throw Error(`Geocode API error: ${geocodeResponse.status}: ${geocodeResponse.error_message}`);
+      }
+      lat = geocodeResponse.results[0].geometry.location.lat;
+      lng = geocodeResponse.results[0].geometry.location.lng;
+      rad = 30;
+      return NearbyService.getNearbyBirds(lat, lng, rad);
+    })
+    .then(function(nearbyServiceResponse) {
+      if (nearbyServiceResponse instanceof Error) {
+        throw Error(`eBird API error: ${nearbyServiceResponse.message}`);
+      }
+      listNearbyBirds(nearbyServiceResponse);
+      sciName = nearbyServiceResponse[0].sciName;
+      comName = nearbyServiceResponse[0].comName;
+      return BirdSoundsService.getSounds(sciName);
+    })
+    .then(function(birdSoundsResponse) {
+      if (birdSoundsResponse instanceof Error) {
+        throw Error(`xeno-canto API error: ${birdSoundsResponse.message}`);
+      }
+      displayBirdSounds(birdSoundsResponse, comName);
+    })
+    .catch(function(error) {
+      displayErrors(error.message);
+    });
 });
-
-
