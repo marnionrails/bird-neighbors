@@ -11,6 +11,7 @@ export default class DynamicSoundDisplay {
     $("#song2").attr("src", songsToOutput[1].file);
     $("#call1").attr("src", callsToOutput[0].file);
     $("#call2").attr("src", callsToOutput[1].file);
+    $("#display-sounds").append(`<p>These sound recordings were supplied by the xeno-canto database.</p>`);
   }
   
   static SongOutput() {
