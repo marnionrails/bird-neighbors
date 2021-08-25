@@ -13,8 +13,9 @@
 5. [Setup/Installation Requirements](#setup)
 6. [Additional Setup/Installation Note for Windows Users](#windows)
 7. [Known Bugs](#bugs)
-8. [License](#license)
-9. [Contact Information](#contact)
+8. [Future Stretch Goals](#goals)
+9. [License](#license)
+10. [Contact Information](#contact)
 
 ## Preview <a id="preview"></a>
 
@@ -126,6 +127,18 @@ In this [article](https://www.certik.io/blog/technology/cors-anywhere-dangers-of
 >* Access sensitive resources in the internal network.
 
 We chose to use CORS-Anywhere despite this but feel it is our duty to inform anyone assessing our project of this information.
+
+## Future Stretch Goals <a id="goals"></a>
+
+* More vigorous error testing -- Only geocode API call has been vigorously error tested. Need to provide bad eBird API key, somehow break the xeno-canto API call, figure out what else might go wrong and test all those scenarios to make sure error handling is working.
+* Display descriptive information about each recording
+* Display multiple birds and their songs and calls (see branch multiple-species-sound-display)
+* Further styling of the UI
+* Let user pick radius, max number of birds & a date (so they can hear birds of different seasons & account for seasonal population change of migratory birds)
+* Assess if song & call recordings are the same recording and respond appropriately if so
+* Add more educational material to the site -- explain the difference between songs & calls, tell user how the birds are being selected (how recently they were sited, what the radius from their zip code is)
+* Delay loading of bird list and sound players until all APIs have returned...have a waiting screen?
+
 
 ## License <a id="license"></a>
 *[MIT](https://choosealicense.com/licenses/mit/)*
