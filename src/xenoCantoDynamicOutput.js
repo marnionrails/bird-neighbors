@@ -5,7 +5,10 @@ export default class DynamicSoundDisplay {
   static displayBirdSounds(xenoCantoResponse, commonName) {
     const callsToOutput = DataParsing.filterForCalls(xenoCantoResponse);
     $("#common-name").text(commonName);
-    $("#call").attr("src", callsToOutput[0].file);
+    const songsToOutput = DataParsing.filterForSongs(response);
+    const callsToOutput = DataParsing.filterForCalls(response);
+    $("#call1").attr("src", callsToOutput[0].file);
+    $("#call2").attr("src", callsToOutput[1].file);
   }
   
   static SongOutput(eBirdResponse, xenoCantoResponse) {
@@ -20,13 +23,31 @@ export default class DynamicSoundDisplay {
         <figcaption>Song ${eBirdResponse.indexOf('instance') + 2}</figcaption>
         <audio 
           controls
-          id=song${eBirdResponse.indexOf('instance')}${concatenatedCommonName}>
+          id=song1${concatenatedCommonName}>
         </audio>
-      </figure>`;
+      </figure>
+      <figure>
+      <figcaption>Song 2</figcaption>
+      <audio 
+        controls
+        id="song2${concatenatedCommonName}">
+      </audio>
+    </figure>`;
       //the line below is what isn't working. The string inside the jQuery parens prints out the correct string when console.logged but it isn't being recognized as a function. I suspect its because I'm trying to pass a template literal into jQuery but the internet suggests that a template literal should be okay here so I don't actually know what's wrong.
-      $(`#song${eBirdResponse.indexOf('instance')}${concatenatedCommonName}}`).attr("src", songsToOutput[0].file);
+      $(`#song1${concatenatedCommonName}`).attr("src", songsToOutput[0].file);
+      $(`#song2${concatenatedCommonName}`).attr("src", songsToOutput[1].file);
     });
     $('#display-sounds').show();
+    let htmlForSongOutput = `
+    <figure>
+      <figcaption>Song 1</figcaption>
+      <audio 
+        controls
+        id="song1">
+      </audio>
+    </figure>
+    `;
+    
     outputDiv.html(htmlForSongOutput);
   }
 
@@ -34,13 +55,19 @@ export default class DynamicSoundDisplay {
     let outputDiv = $("#calls-output");
     let htmlForCallOutput = `
     <figure>
-      <figcaption>Call</figcaption>
+      <figcaption>Call 1</figcaption>
       <audio 
         controls
-        id="call">
+        id="call1">
       </audio>
-    </figure>`;
+    </figure>
+     <figure>
+     <figcaption>Call 2</figcaption>
+     <audio 
+       controls
+       id="call2">
+     </audio>
+   </figure>`;
     outputDiv.html(htmlForCallOutput);
   }
-} 
-
+}
