@@ -19,8 +19,6 @@
 
 ## Preview <a id="preview"></a>
 
-Direct your browser to a [live version](https://marnionrails.github.io/bird-neighbors) on GitHub Pages.
-
 <img src="./src/assets/images/bird-neighbors-output.png" alt="Screenshot of the application's user interface output: a listing for a Mourning Dove with players for two song recordings and two call recordings." width="50%">
 
 ## Technologies Used <a id="technologies"></a>
