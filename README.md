@@ -1,6 +1,6 @@
 # Meet Your Bird Neighbors
 
-#### _A web-based application which takes a zip code from the user and returns a list of local birds as well as recordings of those birds' songs and calls._
+#### _A web-based application which takes a zip code from the user and returns a recently sited local bird as well as recordings of that bird's songs and calls._
 
 #### By **Alex Bertotto, Smita Raj, Tim Roth, Marni Sucher and Jessica Williams**
 
@@ -13,12 +13,15 @@
 5. [Setup/Installation Requirements](#setup)
 6. [Additional Setup/Installation Note for Windows Users](#windows)
 7. [Known Bugs](#bugs)
-8. [License](#license)
-9. [Contact Information](#contact)
+8. [Future Stretch Goals](#goals)
+9. [License](#license)
+10. [Contact Information](#contact)
 
 ## Preview <a id="preview"></a>
 
 Direct your browser to a [live version](https://marnionrails.github.io/bird-neighbors) on GitHub Pages.
+
+<img src="./src/assets/images/bird-neighbors-output.png" alt="Screenshot of the application's user interface output: a listing for a Mourning Dove with players for two song recordings and two call recordings." width="50%">
 
 ## Technologies Used <a id="technologies"></a>
 
@@ -53,15 +56,15 @@ Direct your browser to a [live version](https://marnionrails.github.io/bird-neig
 
 ## Description <a id="description"></a>
 
-Birds are some of the most common wild animals with which human civilization intersects. Birds are found on every continent and inhabit all the places humans live: urban, suburban, and rural. Birds are not always easy to see or to see for long to get a good look. You're more likely to hear a bird than see it.
+Birds are some of the most common wild animals with which human civilization intersects. Birds are found on every continent and inhabit all the places humans live: urban, suburban, and rural. Birds are not always easy to see or to see for long enough to get a good look. You're more likely to hear most birds than see them.
 
-The Baader-Meinhof Phenomenon, also known as frequency illusion, explains that human brains reinforce recently acquired information by paying more attention to subsequent occurrences of or references to that newly acquired information. Applying this to the context of bird songs and calls we may say, becoming familiar with the songs and calls of your local birds will allow you to actually register and recognize those sounds when birds make them around you. The presence of those birds won't be more frequent (other than expected seasonal population changes of migratory species) but experientially you will become more aware of birds singing and calling around you.
+The Baader-Meinhof Phenomenon, also known as frequency illusion, explains that human brains reinforce recently acquired information by paying more attention to subsequent occurrences of, or references to, that newly acquired information. Applying this to the context of bird songs and calls we may say, becoming familiar with the songs and calls of your local birds will allow you to actually register and recognize those sounds when birds make them around you. The presence of those birds won't be more frequent (other than expected seasonal population changes of migratory species) but experientially you will become more aware of birds singing and calling around you.
 
-Learning to recognize the songs and calls of your local birds with our application, Meet Your Bird Neighbors, will enhance your awareness of and appreciation for the world around you while also tuning your attention to all the different bird species around you.
+Learning to recognize the songs and calls of your local birds with our application, Meet Your Bird Neighbors, will enhance your awareness of and appreciation for the world around you by tuning your attention to all the different bird species around you.
 
-Enter a zip code into the application's user interface and click the 'submit' button. The application will return to you a list of local birds from Cornell Lab of Ornithology's [eBird database](https://ebird.org/home) as well as recordings of each of those species songs and calls from the [xeno-canto database](https://www.xeno-canto.org/).
+Enter a zip code into the application's user interface and click the 'submit' button. The application will return to you the most recent sighting of a local bird within a ten mile radius as well as recordings of that species' songs and calls. The most recent sighting is from Cornell Lab of Ornithology's [eBird database](https://ebird.org/home). The sound recordings are from the [xeno-canto database](https://www.xeno-canto.org/).
 
-Listen to the recordings, become familiar with them and then listen as you go about your life. Enhance your connection to the natural world around you by getting to know your bird neighbors.
+Listen to the recordings, become familiar with them and then listen as you go about your life. Enhance your connection to the natural world around you by meeting your bird neighbors.
 
 ## API Key Procurement <a id="api"></a>
 
@@ -111,6 +114,9 @@ This environment was created on a Mac. For it to work properly in your local env
 * Update package.json, line 8 to: `"start": "npm run build & webpack-dev-server --open --mode development",`
 
 ## Known Bugs <a id="bugs"></a>
+
+<img src="./src/assets/images/proxy-server.jpeg" alt="Screenshot of the code utilitzing the proxy-server in the xeno-canto API call." width="75%">
+
 Meet Your Bird Neighbors utilizes the xeno-canto API, which is not CORS-enabled. As this application does not use a back end server, we got around the CORS protocol by using a proxy server. We created an instance of [CORS-Anywhere](https://github.com/Rob--W/cors-anywhere) hosted for free on [Heroku](https://www.heroku.com/). We chose CORS-anywhere as it was the only solution we found that matched our current coding skills. If your curious, we followed these [instructions](https://www.youtube.com/watch?v=UjqzsNeSZ1k) on YouTube to create our instance of CORS-anywhere. Our proxy server works just fine, however there is an alleged security issue with any instance of CORS-Anywhere that we feel you should be aware of in case you were to consider also using this workaround to CORS protocol. Security specialists at [Certik](https://www.certik.io/about/#home) have taken issue with CORS-Anywhere. Certik describes their expertise as follows:
 >Founded in 2018 by professors of Yale University and Columbia University, CertiK is a pioneer in blockchain security, utilizing best-in-class AI technology to secure and monitor blockchain protocols and smart contracts. CertiK’s mission is to secure the cyber world. Starting with blockchain, CertiK applies cutting-edge innovations from academia into enterprise, enabling mission-critical applications to be built with security and correctness.
 
@@ -121,6 +127,18 @@ In this [article](https://www.certik.io/blog/technology/cors-anywhere-dangers-of
 >* Access sensitive resources in the internal network.
 
 We chose to use CORS-Anywhere despite this but feel it is our duty to inform anyone assessing our project of this information.
+
+## Future Stretch Goals <a id="goals"></a>
+
+* More vigorous error testing -- Only geocode API call has been vigorously error tested. Need to provide bad eBird API key, somehow break the xeno-canto API call, figure out what else might go wrong and test all those scenarios to make sure error handling is working.
+* Display descriptive information about each recording
+* Display multiple birds and their songs and calls (see branch multiple-species-sound-display)
+* Further styling of the UI
+* Let user pick radius, max number of birds & a date (so they can hear birds of different seasons & account for seasonal population change of migratory birds)
+* Assess if song & call recordings are the same recording and respond appropriately if so
+* Add more educational material to the site -- explain the difference between songs & calls, tell user how the birds are being selected (how recently they were sited, what the radius from their zip code is)
+* Delay loading of bird list and sound players until all APIs have returned...have a waiting screen?
+
 
 ## License <a id="license"></a>
 *[MIT](https://choosealicense.com/licenses/mit/)*
