@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Meet Your Bird Neighbors</title>
+</head>
+<body>
+  <div class="container">
+    <img src="assets/images/bird.jpeg" id="bg" alt="">
+    <div class="zip">
+      <div class="row">
+        <div class = "col">
+          <h1>Meet your bird neighbors</h1>
+          <label for="zipcode">Enter your 5 digit zip code:</label>
+          <input id="zipCode" type="text" onkeypress= " return event.charCode > 47 && event.charCode < 58;" maxlength="5" required></input>
+          <button id="zipcode" class="btn-primary">Submit</button>
+        </div>
+        <div class = "col">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-header">Nearby birds include:</p>
+              <ul class= "showNearBirds"></ul>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <div class="showErrors"></div>
+    <div id="display-sounds">
+      <div>
+        <h5>Listen to <span id="common-name"></span></h5>
+        <div id="songs-output">
+          
+        </div>
+        <div id="calls-output">
+
+        </div>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript" src="bundle.js"></script></body>
+</html>
